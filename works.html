@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
+  <title>Все работы | Пескоструйная обработка и покраска спецтехники</title>
+  <meta name="description"
+    content="Галерея выполненных работ: пескоструйная обработка, покраска спецтехники, кузовов, рам, труб, катеров и металлоконструкций.">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="shortcut icon" type="image/png" href="./favicon.png">
+  <link rel="apple-touch-icon" href="./favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./mobile.css">
+  <link rel="stylesheet" href="./works.css">
+</head>
+
+<body class="works-page">
+  <div class="page-aurora aurora-left"></div>
+  <div class="page-aurora aurora-right"></div>
+  <div class="page-grid" aria-hidden="true"></div>
+
+  <header class="works-header">
+    <div class="container works-nav-shell glass">
+      <div class="works-header-contacts" aria-label="Контакты">
+        <a class="works-contact works-contact-phone" href="tel:+79269377191">+7 926 937-71-91</a>
+        <a class="works-contact works-contact-mail" href="mailto:89268377191@mail.ru">89268377191@mail.ru</a>
+      </div>
+
+      <div class="works-messengers" aria-label="Мессенджеры">
+        <a class="works-messenger works-messenger-telegram" href="https://t.me/+79269377191?profile" target="_blank"
+          rel="noreferrer" aria-label="Telegram">
+          <span>Telegram</span>
+        </a>
+        <a class="works-messenger works-messenger-whatsapp" href="https://wa.me/79269377191" target="_blank"
+          rel="noreferrer" aria-label="WhatsApp">
+          <span>WhatsApp</span>
+        </a>
+        <a class="works-messenger works-messenger-max" href="https://max.ru/" target="_blank" rel="noreferrer"
+          aria-label="MAX">
+          <span>MAX</span>
+        </a>
+      </div>
+
+      <button class="works-close-btn" type="button" data-close-works>На главную</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="works-hero">
+      <div class="container works-hero-grid">
+        <div class="works-hero-copy">
+          <span class="section-kicker">Галерея выполненных работ</span>
+          <h1>Все фото по пескострую, покраске и восстановлению техники</h1>
+          <p>Собрал все снимки из папки работ, разложил их по сериям и подписал каждый кадр: что на нём происходит,
+            какой этап показан и к какому типу работ относится фото.</p>
+        </div>
+        <div class="works-hero-side">
+          <div class="works-hero-brand glass" aria-hidden="true">
+            <img src="./logo.png" alt="">
+          </div>
+          <div class="works-hero-panel glass">
+            <strong id="works-total">409 фото</strong>
+            <span>реальные производственные кадры</span>
+            <a class="btn btn-primary" href="#all-works">Смотреть галерею</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section works-cases-section">
+      <div class="container">
+        <div class="section-head split">
+          <div>
+            <span class="section-kicker">Найденные серии</span>
+            <h2>Где читается логика до, процесс и после</h2>
+          </div>
+        </div>
+        <div class="works-cases-frame">
+          <button class="works-page-arrow works-cases-prev" type="button" data-cases-prev
+            aria-label="Предыдущая серия">
+            ‹
+          </button>
+          <div class="works-cases" id="works-cases"></div>
+          <button class="works-page-arrow works-cases-next" type="button" data-cases-next aria-label="Следующая серия">
+            ›
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="all-works">
+      <div class="container">
+        <div class="section-head split works-gallery-head">
+          <div>
+            <span class="section-kicker">Все кадры</span>
+            <h2>Полная галерея с индивидуальными описаниями</h2>
+          </div>
+          <div class="works-gallery-tools">
+            <div class="works-count glass" id="works-count"></div>
+            <label class="works-search glass">
+              <span>Поиск</span>
+              <input type="search" id="works-search" placeholder="Ключевое слово">
+            </label>
+          </div>
+        </div>
+
+        <div class="works-toolbar glass" aria-label="Фильтры галереи">
+          <button class="works-filter is-active" type="button" data-filter="all">Все</button>
+          <button class="works-filter" type="button" data-filter="до/после">До/после</button>
+          <button class="works-filter" type="button" data-filter="пескоструй">Пескоструй</button>
+          <button class="works-filter" type="button" data-filter="покраска">Покраска</button>
+          <button class="works-filter" type="button" data-filter="детали">Детали</button>
+        </div>
+
+        <div class="works-gallery-frame">
+          <button class="works-page-arrow works-page-prev" type="button" data-page-prev aria-label="Предыдущие фото">
+            ‹
+          </button>
+          <div class="works-grid" id="works-grid"></div>
+          <button class="works-page-arrow works-page-next" type="button" data-page-next aria-label="Следующие фото">
+            ›
+          </button>
+        </div>
+        <div class="works-page-status" id="works-page-status"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="works-lightbox" id="works-lightbox" hidden>
+    <button class="works-lightbox-close" type="button" aria-label="Закрыть просмотр">×</button>
+    <div class="works-lightbox-backdrop" data-works-lightbox-close></div>
+    <figure class="works-lightbox-card">
+      <img id="works-lightbox-image" src="" alt="">
+      <figcaption>
+        <span id="works-lightbox-meta"></span>
+        <strong id="works-lightbox-title"></strong>
+        <p id="works-lightbox-description"></p>
+      </figcaption>
+    </figure>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-shell glass">
+      <p>Пескоструйная обработка и покраска спецтехники</p>
+      <div class="footer-links">
+        <a href="./index.html">Главная</a>
+        <a href="./index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./works-data.js"></script>
+  <script src="./works.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
