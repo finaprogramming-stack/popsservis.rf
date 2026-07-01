@@ -54,11 +54,9 @@ const buildYandexRouteUrl = (fromLat, fromLon, destination) => {
 
 routeLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
-    const destination = link.dataset.routeAddress || (
-      link.dataset.routeLat && link.dataset.routeLon
-        ? `${link.dataset.routeLat},${link.dataset.routeLon}`
-        : ""
-    );
+    const destination = link.dataset.routeLat && link.dataset.routeLon
+      ? `${link.dataset.routeLat},${link.dataset.routeLon}`
+      : link.dataset.routeAddress || "";
 
     if (!destination || !navigator.geolocation) {
       return;

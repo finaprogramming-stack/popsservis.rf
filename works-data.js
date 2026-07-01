@@ -1,28 +1,28 @@
 const worksCases = [
   {
-    "title": "Оранжевый КамАЗ",
-    "range": "017-026, 326-352, 378-382",
-    "summary": "Повторяющаяся серия с кабиной и самосвальным кузовом: хорошо читается путь от подготовки и маскировки до яркого финишного покрытия.",
+    "title": "КамАЗ до/после",
+    "range": "007, 024-026",
+    "summary": "Один тип техники без лишней двери в кадре: старая кабина до восстановления и готовый оранжевый КамАЗ после окраски.",
     "before": [
-      17,
-      338
+      7,
+      5
     ],
     "after": [
       24,
-      350
+      26
     ]
   },
   {
     "title": "Самосвальный кузов до/после",
     "range": "152-172, 251-262",
-    "summary": "Несколько ракурсов одного типа работ: старый кузов, пескоструй, грунт и финальная окраска.",
+    "summary": "Один самосвальный кузов в понятной логике: убитый борт до обработки, пескоструй и готовая красная машина после окраски.",
     "before": [
-      152,
+      255,
       255
     ],
     "after": [
-      166,
-      259
+      259,
+      262
     ]
   },
   {
@@ -41,27 +41,27 @@ const worksCases = [
   {
     "title": "Трубы большого диаметра",
     "range": "093-144",
-    "summary": "Обработка наружной и внутренней поверхности труб, включая работу внутри секций.",
+    "summary": "Трубы большого диаметра: грязная наружная поверхность до обработки и готовые секции без человека в кадре.",
     "before": [
       93,
       114
     ],
     "after": [
-      130,
-      142
+      141,
+      144
     ]
   },
   {
     "title": "Трал и аппарели",
     "range": "383-403",
-    "summary": "Низкорамный трал: очистка, подготовка аппарелей и финальная окраска в красно-зелёной схеме.",
+    "summary": "Одна модель низкорамного трала: подготовка металла, промежуточный процесс и готовая зелёная платформа.",
     "before": [
       399,
       400
     ],
     "after": [
-      393,
-      397
+      397,
+      398
     ]
   },
   {
@@ -78,10 +78,11 @@ const worksCases = [
     ]
   }
 ];
+
 const worksItems = [
   {
     "id": 1,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-02 at 10.51.12.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-02 at 10.51.12.jpeg",
     "alt": "Самосвал и трал: состояние до работ",
     "project": "Самосвал и трал",
     "stage": "до/после",
@@ -93,11 +94,13 @@ const worksItems = [
       "Самосвал и трал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 2,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-02 at 10.51.13 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-02 at 10.51.13 (1).jpeg",
     "alt": "Самосвал и трал: этап подготовки",
     "project": "Самосвал и трал",
     "stage": "до/после",
@@ -109,11 +112,13 @@ const worksItems = [
       "Самосвал и трал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 3,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-02 at 10.51.13 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-02 at 10.51.13 (2).jpeg",
     "alt": "Самосвал и трал: промежуточный контроль",
     "project": "Самосвал и трал",
     "stage": "до/после",
@@ -125,11 +130,13 @@ const worksItems = [
       "Самосвал и трал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 4,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-02 at 10.51.13.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-02 at 10.51.13.jpeg",
     "alt": "Самосвал и трал: готовый результат",
     "project": "Самосвал и трал",
     "stage": "до/после",
@@ -141,11 +148,13 @@ const worksItems = [
       "Самосвал и трал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 5,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-02 at 10.51.14.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-02 at 10.51.14.jpeg",
     "alt": "Самосвал и трал: состояние до работ",
     "project": "Самосвал и трал",
     "stage": "до/после",
@@ -157,11 +166,13 @@ const worksItems = [
       "Самосвал и трал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 6,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-02 at 10.51.15.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-02 at 10.51.15.jpeg",
     "alt": "Самосвал и трал: этап подготовки",
     "project": "Самосвал и трал",
     "stage": "до/после",
@@ -173,11 +184,13 @@ const worksItems = [
       "Самосвал и трал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 7,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-02 at 10.51.17.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-02 at 10.51.17.jpeg",
     "alt": "Самосвал и трал: промежуточный контроль",
     "project": "Самосвал и трал",
     "stage": "до/после",
@@ -189,11 +202,13 @@ const worksItems = [
       "Самосвал и трал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 8,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-02 at 10.51.48 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-02 at 10.51.48 (1).jpeg",
     "alt": "Самосвал и трал: готовый результат",
     "project": "Самосвал и трал",
     "stage": "до/после",
@@ -205,11 +220,13 @@ const worksItems = [
       "Самосвал и трал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 9,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-02 at 10.51.48.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-02 at 10.51.48.jpeg",
     "alt": "Самосвал и трал: состояние до работ",
     "project": "Самосвал и трал",
     "stage": "до/после",
@@ -221,11 +238,13 @@ const worksItems = [
       "Самосвал и трал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 10,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-09 at 09.34.54.jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-07-09 at 09.34.54.jpeg",
     "alt": "Металлоконструкции: снятие коррозии",
     "project": "Металлоконструкции",
     "stage": "пескоструй",
@@ -237,11 +256,13 @@ const worksItems = [
       "Металлоконструкции",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 11,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-09 at 09.47.21.jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-07-09 at 09.47.21.jpeg",
     "alt": "Металлоконструкции: обработка поверхности",
     "project": "Металлоконструкции",
     "stage": "пескоструй",
@@ -253,11 +274,13 @@ const worksItems = [
       "Металлоконструкции",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 12,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-09 at 09.58.30.jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-07-09 at 09.58.30.jpeg",
     "alt": "Металлоконструкции: подготовка под грунт",
     "project": "Металлоконструкции",
     "stage": "пескоструй",
@@ -269,11 +292,13 @@ const worksItems = [
       "Металлоконструкции",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 13,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-09 at 10.19.28.jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-07-09 at 10.19.28.jpeg",
     "alt": "Металлоконструкции: абразивная очистка",
     "project": "Металлоконструкции",
     "stage": "пескоструй",
@@ -285,11 +310,13 @@ const worksItems = [
       "Металлоконструкции",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 14,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-09 at 10.19.41.jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-07-09 at 10.19.41.jpeg",
     "alt": "Металлоконструкции: снятие коррозии",
     "project": "Металлоконструкции",
     "stage": "пескоструй",
@@ -301,11 +328,13 @@ const worksItems = [
       "Металлоконструкции",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 15,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-09 at 20.26.40.jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-07-09 at 20.26.40.jpeg",
     "alt": "Металлоконструкции: обработка поверхности",
     "project": "Металлоконструкции",
     "stage": "пескоструй",
@@ -317,11 +346,13 @@ const worksItems = [
       "Металлоконструкции",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 16,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-09 at 20.26.41.jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-07-09 at 20.26.41.jpeg",
     "alt": "Металлоконструкции: подготовка под грунт",
     "project": "Металлоконструкции",
     "stage": "пескоструй",
@@ -333,11 +364,13 @@ const worksItems = [
       "Металлоконструкции",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 17,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-10 at 14.48.51.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-10 at 14.48.51.jpeg",
     "alt": "Оранжевый КамАЗ: окраска элемента",
     "project": "Оранжевый КамАЗ",
     "stage": "покраска/результат",
@@ -349,11 +382,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "покраска/результат",
       "окраска элемента"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 18,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-10 at 14.48.52 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-10 at 14.48.52 (1).jpeg",
     "alt": "Оранжевый КамАЗ: финишный слой",
     "project": "Оранжевый КамАЗ",
     "stage": "покраска/результат",
@@ -365,11 +400,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "покраска/результат",
       "финишный слой"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 19,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-10 at 14.48.52 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-10 at 14.48.52 (2).jpeg",
     "alt": "Оранжевый КамАЗ: контроль покрытия",
     "project": "Оранжевый КамАЗ",
     "stage": "покраска/результат",
@@ -381,11 +418,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "покраска/результат",
       "контроль покрытия"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 20,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-10 at 14.48.52.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-10 at 14.48.52.jpeg",
     "alt": "Оранжевый КамАЗ: готовый вид",
     "project": "Оранжевый КамАЗ",
     "stage": "покраска/результат",
@@ -397,11 +436,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "покраска/результат",
       "готовый вид"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 21,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-11 at 14.20.07.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-11 at 14.20.07.jpeg",
     "alt": "Оранжевый КамАЗ: окраска элемента",
     "project": "Оранжевый КамАЗ",
     "stage": "покраска/результат",
@@ -413,11 +454,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "покраска/результат",
       "окраска элемента"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 22,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-11 at 14.20.16.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-11 at 14.20.16.jpeg",
     "alt": "Оранжевый КамАЗ: финишный слой",
     "project": "Оранжевый КамАЗ",
     "stage": "покраска/результат",
@@ -429,11 +472,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "покраска/результат",
       "финишный слой"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 23,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-11 at 14.20.24.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-11 at 14.20.24.jpeg",
     "alt": "Оранжевый КамАЗ: контроль покрытия",
     "project": "Оранжевый КамАЗ",
     "stage": "покраска/результат",
@@ -445,11 +490,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "покраска/результат",
       "контроль покрытия"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 24,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-14 at 08.48.15 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-14 at 08.48.15 (1).jpeg",
     "alt": "Оранжевый КамАЗ: готовый вид",
     "project": "Оранжевый КамАЗ",
     "stage": "покраска/результат",
@@ -461,11 +508,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "покраска/результат",
       "готовый вид"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 25,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-14 at 08.48.15.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-14 at 08.48.15.jpeg",
     "alt": "Оранжевый КамАЗ: окраска элемента",
     "project": "Оранжевый КамАЗ",
     "stage": "покраска/результат",
@@ -477,11 +526,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "покраска/результат",
       "окраска элемента"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 26,
-    "src": "./assets/allimages/WhatsApp Image 2025-07-14 at 08.48.16.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-07-14 at 08.48.16.jpeg",
     "alt": "Оранжевый КамАЗ: финишный слой",
     "project": "Оранжевый КамАЗ",
     "stage": "покраска/результат",
@@ -493,11 +544,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "покраска/результат",
       "финишный слой"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 27,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.27.jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.27.jpeg",
     "alt": "Сводные кейсы: промежуточный контроль",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -509,11 +562,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 28,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.28 (1).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.28 (1).jpeg",
     "alt": "Сводные кейсы: готовый результат",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -525,11 +580,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 29,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.28 (2).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.28 (2).jpeg",
     "alt": "Сводные кейсы: состояние до работ",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -541,11 +598,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 30,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.28 (3).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.28 (3).jpeg",
     "alt": "Сводные кейсы: этап подготовки",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -557,11 +616,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 31,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.28.jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.28.jpeg",
     "alt": "Сводные кейсы: промежуточный контроль",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -573,11 +634,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 32,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.29 (1).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.29 (1).jpeg",
     "alt": "Сводные кейсы: готовый результат",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -589,11 +652,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 33,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.29 (2).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.29 (2).jpeg",
     "alt": "Сводные кейсы: состояние до работ",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -605,11 +670,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 34,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.29 (3).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.29 (3).jpeg",
     "alt": "Сводные кейсы: этап подготовки",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -621,11 +688,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 35,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.29.jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.29.jpeg",
     "alt": "Сводные кейсы: промежуточный контроль",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -637,11 +706,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 36,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.30 (1).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.30 (1).jpeg",
     "alt": "Сводные кейсы: готовый результат",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -653,11 +724,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 37,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.30 (2).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.30 (2).jpeg",
     "alt": "Сводные кейсы: состояние до работ",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -669,11 +742,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 38,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.30 (3).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.30 (3).jpeg",
     "alt": "Сводные кейсы: этап подготовки",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -685,11 +760,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 39,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.30 (4).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.30 (4).jpeg",
     "alt": "Сводные кейсы: промежуточный контроль",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -701,11 +778,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 40,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.30.jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.30.jpeg",
     "alt": "Сводные кейсы: готовый результат",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -717,11 +796,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 41,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.31 (1).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.31 (1).jpeg",
     "alt": "Сводные кейсы: состояние до работ",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -733,11 +814,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 42,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.31 (2).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.31 (2).jpeg",
     "alt": "Сводные кейсы: этап подготовки",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -749,11 +832,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 43,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.31 (3).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.31 (3).jpeg",
     "alt": "Сводные кейсы: промежуточный контроль",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -765,11 +850,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 44,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.31.jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.31.jpeg",
     "alt": "Сводные кейсы: готовый результат",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -781,11 +868,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 45,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.32 (1).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.32 (1).jpeg",
     "alt": "Сводные кейсы: состояние до работ",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -797,11 +886,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 46,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.32 (2).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.32 (2).jpeg",
     "alt": "Сводные кейсы: этап подготовки",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -813,11 +904,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 47,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.32 (3).jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.32 (3).jpeg",
     "alt": "Сводные кейсы: промежуточный контроль",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -829,11 +922,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 48,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.27.32.jpeg",
+    "src": "./assets/allimages/prochee/WhatsApp Image 2025-11-11 at 07.27.32.jpeg",
     "alt": "Сводные кейсы: готовый результат",
     "project": "Сводные кейсы",
     "stage": "до/после",
@@ -845,11 +940,13 @@ const worksItems = [
       "Сводные кейсы",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "prochee",
+    "categoryLabel": "Прочее"
   },
   {
     "id": 49,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.41.54 (1).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 07.41.54 (1).jpeg",
     "alt": "Автокран и стрела: очистка узла",
     "project": "Автокран и стрела",
     "stage": "пескоструй/окраска",
@@ -861,11 +958,13 @@ const worksItems = [
       "Автокран и стрела",
       "пескоструй/окраска",
       "очистка узла"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 50,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.41.54.jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 07.41.54.jpeg",
     "alt": "Автокран и стрела: подготовка металла",
     "project": "Автокран и стрела",
     "stage": "пескоструй/окраска",
@@ -877,11 +976,13 @@ const worksItems = [
       "Автокран и стрела",
       "пескоструй/окраска",
       "подготовка металла"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 51,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.41.55 (2).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 07.41.55 (2).jpeg",
     "alt": "Автокран и стрела: нанесение покрытия",
     "project": "Автокран и стрела",
     "stage": "пескоструй/окраска",
@@ -893,11 +994,13 @@ const worksItems = [
       "Автокран и стрела",
       "пескоструй/окраска",
       "нанесение покрытия"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 52,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.41.55 (3).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 07.41.55 (3).jpeg",
     "alt": "Автокран и стрела: результат",
     "project": "Автокран и стрела",
     "stage": "пескоструй/окраска",
@@ -909,11 +1012,13 @@ const worksItems = [
       "Автокран и стрела",
       "пескоструй/окраска",
       "результат"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 53,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.41.55 (4).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 07.41.55 (4).jpeg",
     "alt": "Автокран и стрела: очистка узла",
     "project": "Автокран и стрела",
     "stage": "пескоструй/окраска",
@@ -925,11 +1030,13 @@ const worksItems = [
       "Автокран и стрела",
       "пескоструй/окраска",
       "очистка узла"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 54,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.41.56 (1).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 07.41.56 (1).jpeg",
     "alt": "Автокран и стрела: подготовка металла",
     "project": "Автокран и стрела",
     "stage": "пескоструй/окраска",
@@ -941,11 +1048,13 @@ const worksItems = [
       "Автокран и стрела",
       "пескоструй/окраска",
       "подготовка металла"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 55,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.41.56 (2).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 07.41.56 (2).jpeg",
     "alt": "Автокран и стрела: нанесение покрытия",
     "project": "Автокран и стрела",
     "stage": "пескоструй/окраска",
@@ -957,11 +1066,13 @@ const worksItems = [
       "Автокран и стрела",
       "пескоструй/окраска",
       "нанесение покрытия"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 56,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.41.56 (3).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 07.41.56 (3).jpeg",
     "alt": "Автокран и стрела: результат",
     "project": "Автокран и стрела",
     "stage": "пескоструй/окраска",
@@ -973,11 +1084,13 @@ const worksItems = [
       "Автокран и стрела",
       "пескоструй/окраска",
       "результат"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 57,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.41.56.jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 07.41.56.jpeg",
     "alt": "Автокран и стрела: очистка узла",
     "project": "Автокран и стрела",
     "stage": "пескоструй/окраска",
@@ -989,11 +1102,13 @@ const worksItems = [
       "Автокран и стрела",
       "пескоструй/окраска",
       "очистка узла"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 58,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.42.31.jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 07.42.31.jpeg",
     "alt": "Навесное оборудование: финальный вид",
     "project": "Навесное оборудование",
     "stage": "результат",
@@ -1005,11 +1120,13 @@ const worksItems = [
       "Навесное оборудование",
       "результат",
       "финальный вид"
-    ]
+    ],
+    "category": "detali-zapchasti",
+    "categoryLabel": "Детали и запчасти"
   },
   {
     "id": 59,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.42.32 (1).jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 07.42.32 (1).jpeg",
     "alt": "Навесное оборудование: контроль результата",
     "project": "Навесное оборудование",
     "stage": "результат",
@@ -1021,11 +1138,13 @@ const worksItems = [
       "Навесное оборудование",
       "результат",
       "контроль результата"
-    ]
+    ],
+    "category": "detali-zapchasti",
+    "categoryLabel": "Детали и запчасти"
   },
   {
     "id": 60,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.42.32 (2).jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 07.42.32 (2).jpeg",
     "alt": "Навесное оборудование: сдача после работ",
     "project": "Навесное оборудование",
     "stage": "результат",
@@ -1037,11 +1156,13 @@ const worksItems = [
       "Навесное оборудование",
       "результат",
       "сдача после работ"
-    ]
+    ],
+    "category": "detali-zapchasti",
+    "categoryLabel": "Детали и запчасти"
   },
   {
     "id": 61,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.42.32.jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 07.42.32.jpeg",
     "alt": "Навесное оборудование: готовый элемент",
     "project": "Навесное оборудование",
     "stage": "результат",
@@ -1053,11 +1174,13 @@ const worksItems = [
       "Навесное оборудование",
       "результат",
       "готовый элемент"
-    ]
+    ],
+    "category": "detali-zapchasti",
+    "categoryLabel": "Детали и запчасти"
   },
   {
     "id": 62,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.42 (1).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.42 (1).jpeg",
     "alt": "Катер: этап подготовки",
     "project": "Катер",
     "stage": "до/после",
@@ -1069,11 +1192,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 63,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.42 (2).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.42 (2).jpeg",
     "alt": "Катер: промежуточный контроль",
     "project": "Катер",
     "stage": "до/после",
@@ -1085,11 +1210,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 64,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.42.jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.42.jpeg",
     "alt": "Катер: готовый результат",
     "project": "Катер",
     "stage": "до/после",
@@ -1101,11 +1228,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 65,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.43 (1).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.43 (1).jpeg",
     "alt": "Катер: состояние до работ",
     "project": "Катер",
     "stage": "до/после",
@@ -1117,11 +1246,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 66,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.43.jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.43.jpeg",
     "alt": "Катер: этап подготовки",
     "project": "Катер",
     "stage": "до/после",
@@ -1133,11 +1264,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 67,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.44 (1).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.44 (1).jpeg",
     "alt": "Катер: промежуточный контроль",
     "project": "Катер",
     "stage": "до/после",
@@ -1149,11 +1282,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 68,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.44 (2).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.44 (2).jpeg",
     "alt": "Катер: готовый результат",
     "project": "Катер",
     "stage": "до/после",
@@ -1165,11 +1300,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 69,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.44.jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.44.jpeg",
     "alt": "Катер: состояние до работ",
     "project": "Катер",
     "stage": "до/после",
@@ -1181,11 +1318,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 70,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.45 (1).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.45 (1).jpeg",
     "alt": "Катер: этап подготовки",
     "project": "Катер",
     "stage": "до/после",
@@ -1197,11 +1336,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 71,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.45 (2).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.45 (2).jpeg",
     "alt": "Катер: промежуточный контроль",
     "project": "Катер",
     "stage": "до/после",
@@ -1213,11 +1354,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 72,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.45 (3).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.45 (3).jpeg",
     "alt": "Катер: готовый результат",
     "project": "Катер",
     "stage": "до/после",
@@ -1229,11 +1372,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 73,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.46 (1).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.46 (1).jpeg",
     "alt": "Катер: состояние до работ",
     "project": "Катер",
     "stage": "до/после",
@@ -1245,11 +1390,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 74,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.46 (2).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.46 (2).jpeg",
     "alt": "Катер: этап подготовки",
     "project": "Катер",
     "stage": "до/после",
@@ -1261,11 +1408,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 75,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.46 (3).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.46 (3).jpeg",
     "alt": "Катер: промежуточный контроль",
     "project": "Катер",
     "stage": "до/после",
@@ -1277,11 +1426,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 76,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.46.jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.46.jpeg",
     "alt": "Катер: готовый результат",
     "project": "Катер",
     "stage": "до/после",
@@ -1293,11 +1444,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 77,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.47 (1).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.47 (1).jpeg",
     "alt": "Катер: состояние до работ",
     "project": "Катер",
     "stage": "до/после",
@@ -1309,11 +1462,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 78,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.47 (3).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.47 (3).jpeg",
     "alt": "Катер: этап подготовки",
     "project": "Катер",
     "stage": "до/после",
@@ -1325,11 +1480,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 79,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.47.jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.47.jpeg",
     "alt": "Катер: промежуточный контроль",
     "project": "Катер",
     "stage": "до/после",
@@ -1341,11 +1498,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 80,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.48 (1).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.48 (1).jpeg",
     "alt": "Катер: готовый результат",
     "project": "Катер",
     "stage": "до/после",
@@ -1357,11 +1516,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 81,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.48 (2).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.48 (2).jpeg",
     "alt": "Катер: состояние до работ",
     "project": "Катер",
     "stage": "до/после",
@@ -1373,11 +1534,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 82,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.48.jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.48.jpeg",
     "alt": "Катер: этап подготовки",
     "project": "Катер",
     "stage": "до/после",
@@ -1389,11 +1552,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 83,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.49 (1).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.49 (1).jpeg",
     "alt": "Катер: промежуточный контроль",
     "project": "Катер",
     "stage": "до/после",
@@ -1405,11 +1570,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 84,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.49 (2).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.49 (2).jpeg",
     "alt": "Катер: готовый результат",
     "project": "Катер",
     "stage": "до/после",
@@ -1421,11 +1588,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 85,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.49 (3).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.49 (3).jpeg",
     "alt": "Катер: состояние до работ",
     "project": "Катер",
     "stage": "до/после",
@@ -1437,11 +1606,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 86,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.49 (4).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.49 (4).jpeg",
     "alt": "Катер: этап подготовки",
     "project": "Катер",
     "stage": "до/после",
@@ -1453,11 +1624,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 87,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.49.jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.49.jpeg",
     "alt": "Катер: промежуточный контроль",
     "project": "Катер",
     "stage": "до/после",
@@ -1469,11 +1642,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 88,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.50 (1).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.50 (1).jpeg",
     "alt": "Катер: готовый результат",
     "project": "Катер",
     "stage": "до/после",
@@ -1485,11 +1660,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 89,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.50 (2).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.50 (2).jpeg",
     "alt": "Катер: состояние до работ",
     "project": "Катер",
     "stage": "до/после",
@@ -1501,11 +1678,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 90,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.50 (3).jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.50 (3).jpeg",
     "alt": "Катер: этап подготовки",
     "project": "Катер",
     "stage": "до/после",
@@ -1517,11 +1696,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 91,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.50.jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.50.jpeg",
     "alt": "Катер: промежуточный контроль",
     "project": "Катер",
     "stage": "до/после",
@@ -1533,11 +1714,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 92,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.52.51.jpeg",
+    "src": "./assets/allimages/kater/WhatsApp Image 2025-11-11 at 07.52.51.jpeg",
     "alt": "Катер: готовый результат",
     "project": "Катер",
     "stage": "до/после",
@@ -1549,11 +1732,13 @@ const worksItems = [
       "Катер",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kater",
+    "categoryLabel": "Катер"
   },
   {
     "id": 93,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.35 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.35 (1).jpeg",
     "alt": "Трубы и профиль: абразивная очистка",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1565,11 +1750,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 94,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.35 (2).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.35 (2).jpeg",
     "alt": "Трубы и профиль: снятие коррозии",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1581,11 +1768,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 95,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.35.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.35.jpeg",
     "alt": "Трубы и профиль: обработка поверхности",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1597,11 +1786,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 96,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.36 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.36 (1).jpeg",
     "alt": "Трубы и профиль: подготовка под грунт",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1613,11 +1804,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 97,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.36.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.36.jpeg",
     "alt": "Трубы и профиль: абразивная очистка",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1629,11 +1822,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 98,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.49 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.49 (1).jpeg",
     "alt": "Трубы и профиль: снятие коррозии",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1645,11 +1840,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 99,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.50 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.50 (1).jpeg",
     "alt": "Трубы и профиль: обработка поверхности",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1661,11 +1858,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 100,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.50.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.50.jpeg",
     "alt": "Трубы и профиль: подготовка под грунт",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1677,11 +1876,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 101,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.51.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.51.jpeg",
     "alt": "Трубы и профиль: абразивная очистка",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1693,11 +1894,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 102,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.52 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.52 (1).jpeg",
     "alt": "Трубы и профиль: снятие коррозии",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1709,11 +1912,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 103,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.52 (2).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.52 (2).jpeg",
     "alt": "Трубы и профиль: обработка поверхности",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1725,11 +1930,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 104,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.52.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.52.jpeg",
     "alt": "Трубы и профиль: подготовка под грунт",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1741,11 +1948,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 105,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.53 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.53 (1).jpeg",
     "alt": "Трубы и профиль: абразивная очистка",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1757,11 +1966,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 106,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.53 (2).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.53 (2).jpeg",
     "alt": "Трубы и профиль: снятие коррозии",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1773,11 +1984,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 107,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.53 (3).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.53 (3).jpeg",
     "alt": "Трубы и профиль: обработка поверхности",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1789,11 +2002,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 108,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.54 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.54 (1).jpeg",
     "alt": "Трубы и профиль: подготовка под грунт",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1805,11 +2020,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 109,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.54 (2).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.54 (2).jpeg",
     "alt": "Трубы и профиль: абразивная очистка",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1821,11 +2038,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 110,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.54 (3).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.54 (3).jpeg",
     "alt": "Трубы и профиль: снятие коррозии",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1837,11 +2056,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 111,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.54.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.54.jpeg",
     "alt": "Трубы и профиль: обработка поверхности",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1853,11 +2074,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 112,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.55 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.55 (1).jpeg",
     "alt": "Трубы и профиль: подготовка под грунт",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1869,11 +2092,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 113,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.55.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.55.jpeg",
     "alt": "Трубы и профиль: абразивная очистка",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1885,11 +2110,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 114,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.56 (3).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.56 (3).jpeg",
     "alt": "Трубы и профиль: снятие коррозии",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1901,11 +2128,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 115,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.57 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.57 (1).jpeg",
     "alt": "Трубы и профиль: обработка поверхности",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1917,11 +2146,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 116,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.57 (2).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.57 (2).jpeg",
     "alt": "Трубы и профиль: подготовка под грунт",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1933,11 +2164,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 117,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.57 (3).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.57 (3).jpeg",
     "alt": "Трубы и профиль: абразивная очистка",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1949,11 +2182,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 118,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.57.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.57.jpeg",
     "alt": "Трубы и профиль: снятие коррозии",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1965,11 +2200,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 119,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.58 (2).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.58 (2).jpeg",
     "alt": "Трубы и профиль: обработка поверхности",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1981,11 +2218,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 120,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.58 (3).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.58 (3).jpeg",
     "alt": "Трубы и профиль: подготовка под грунт",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -1997,11 +2236,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 121,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.58.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.58.jpeg",
     "alt": "Трубы и профиль: абразивная очистка",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2013,11 +2254,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 122,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.59 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.59 (1).jpeg",
     "alt": "Трубы и профиль: снятие коррозии",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2029,11 +2272,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 123,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.59 (2).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.59 (2).jpeg",
     "alt": "Трубы и профиль: обработка поверхности",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2045,11 +2290,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 124,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.59 (3).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.59 (3).jpeg",
     "alt": "Трубы и профиль: подготовка под грунт",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2061,11 +2308,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 125,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.56.59.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.56.59.jpeg",
     "alt": "Трубы и профиль: абразивная очистка",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2077,11 +2326,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 126,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.00 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.00 (1).jpeg",
     "alt": "Трубы и профиль: снятие коррозии",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2093,11 +2344,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 127,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.00 (2).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.00 (2).jpeg",
     "alt": "Трубы и профиль: обработка поверхности",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2109,11 +2362,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 128,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.00 (3).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.00 (3).jpeg",
     "alt": "Трубы и профиль: подготовка под грунт",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2125,11 +2380,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 129,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.00.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.00.jpeg",
     "alt": "Трубы и профиль: абразивная очистка",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2141,11 +2398,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 130,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.01 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.01 (1).jpeg",
     "alt": "Трубы и профиль: снятие коррозии",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2157,11 +2416,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 131,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.01 (2).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.01 (2).jpeg",
     "alt": "Трубы и профиль: обработка поверхности",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2173,11 +2434,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 132,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.01 (3).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.01 (3).jpeg",
     "alt": "Трубы и профиль: подготовка под грунт",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2189,11 +2452,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 133,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.02 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.02 (1).jpeg",
     "alt": "Трубы и профиль: абразивная очистка",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2205,11 +2470,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 134,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.02 (2).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.02 (2).jpeg",
     "alt": "Трубы и профиль: снятие коррозии",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2221,11 +2488,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 135,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.02 (3).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.02 (3).jpeg",
     "alt": "Трубы и профиль: обработка поверхности",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2237,11 +2506,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 136,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.02.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.02.jpeg",
     "alt": "Трубы и профиль: подготовка под грунт",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2253,11 +2524,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 137,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.03 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.03 (1).jpeg",
     "alt": "Трубы и профиль: абразивная очистка",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2269,11 +2542,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 138,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.03 (2).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.03 (2).jpeg",
     "alt": "Трубы и профиль: снятие коррозии",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2285,11 +2560,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 139,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.03 (3).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.03 (3).jpeg",
     "alt": "Трубы и профиль: обработка поверхности",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2301,11 +2578,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 140,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.03.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.03.jpeg",
     "alt": "Трубы и профиль: подготовка под грунт",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2317,11 +2596,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 141,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.04 (1).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.04 (1).jpeg",
     "alt": "Трубы и профиль: абразивная очистка",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2333,11 +2614,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 142,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.04 (2).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.04 (2).jpeg",
     "alt": "Трубы и профиль: снятие коррозии",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2349,11 +2632,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 143,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.04 (3).jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.04 (3).jpeg",
     "alt": "Трубы и профиль: обработка поверхности",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2365,11 +2650,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 144,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.04.jpeg",
+    "src": "./assets/allimages/truby-profil/WhatsApp Image 2025-11-11 at 07.57.04.jpeg",
     "alt": "Трубы и профиль: подготовка под грунт",
     "project": "Трубы и профиль",
     "stage": "пескоструй",
@@ -2381,11 +2668,13 @@ const worksItems = [
       "Трубы и профиль",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "truby-profil",
+    "categoryLabel": "Трубы и профиль"
   },
   {
     "id": 145,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.32.jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 07.57.32.jpeg",
     "alt": "Фасад здания: абразивная очистка",
     "project": "Фасад здания",
     "stage": "пескоструй",
@@ -2397,11 +2686,13 @@ const worksItems = [
       "Фасад здания",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 146,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.33 (1).jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 07.57.33 (1).jpeg",
     "alt": "Фасад здания: снятие коррозии",
     "project": "Фасад здания",
     "stage": "пескоструй",
@@ -2413,11 +2704,13 @@ const worksItems = [
       "Фасад здания",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 147,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.33 (2).jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 07.57.33 (2).jpeg",
     "alt": "Фасад здания: обработка поверхности",
     "project": "Фасад здания",
     "stage": "пескоструй",
@@ -2429,11 +2722,13 @@ const worksItems = [
       "Фасад здания",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 148,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.33 (3).jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 07.57.33 (3).jpeg",
     "alt": "Фасад здания: подготовка под грунт",
     "project": "Фасад здания",
     "stage": "пескоструй",
@@ -2445,11 +2740,13 @@ const worksItems = [
       "Фасад здания",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 149,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.33 (4).jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 07.57.33 (4).jpeg",
     "alt": "Фасад здания: абразивная очистка",
     "project": "Фасад здания",
     "stage": "пескоструй",
@@ -2461,11 +2758,13 @@ const worksItems = [
       "Фасад здания",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 150,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.34 (1).jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 07.57.34 (1).jpeg",
     "alt": "Фасад здания: снятие коррозии",
     "project": "Фасад здания",
     "stage": "пескоструй",
@@ -2477,11 +2776,13 @@ const worksItems = [
       "Фасад здания",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 151,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 07.57.34 (2).jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 07.57.34 (2).jpeg",
     "alt": "Фасад здания: обработка поверхности",
     "project": "Фасад здания",
     "stage": "пескоструй",
@@ -2493,11 +2794,13 @@ const worksItems = [
       "Фасад здания",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 152,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.30 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.30 (2).jpeg",
     "alt": "Оранжевый самосвал: готовый результат",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2509,11 +2812,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 153,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.30.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.30.jpeg",
     "alt": "Оранжевый самосвал: состояние до работ",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2525,11 +2830,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 154,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.31 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.31 (1).jpeg",
     "alt": "Оранжевый самосвал: этап подготовки",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2541,11 +2848,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 155,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.31 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.31 (2).jpeg",
     "alt": "Оранжевый самосвал: промежуточный контроль",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2557,11 +2866,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 156,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.31 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.31 (3).jpeg",
     "alt": "Оранжевый самосвал: готовый результат",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2573,11 +2884,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 157,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.31.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.31.jpeg",
     "alt": "Оранжевый самосвал: состояние до работ",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2589,11 +2902,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 158,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.32 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.32 (1).jpeg",
     "alt": "Оранжевый самосвал: этап подготовки",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2605,11 +2920,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 159,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.32 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.32 (2).jpeg",
     "alt": "Оранжевый самосвал: промежуточный контроль",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2621,11 +2938,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 160,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.32 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.32 (3).jpeg",
     "alt": "Оранжевый самосвал: готовый результат",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2637,11 +2956,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 161,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.33.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.33.jpeg",
     "alt": "Оранжевый самосвал: состояние до работ",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2653,11 +2974,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 162,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.34 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.34 (1).jpeg",
     "alt": "Оранжевый самосвал: этап подготовки",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2669,11 +2992,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 163,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.34 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.34 (2).jpeg",
     "alt": "Оранжевый самосвал: промежуточный контроль",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2685,11 +3010,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 164,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.34 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.34 (3).jpeg",
     "alt": "Оранжевый самосвал: готовый результат",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2701,11 +3028,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 165,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.34.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.34.jpeg",
     "alt": "Оранжевый самосвал: состояние до работ",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2717,11 +3046,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 166,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.35 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.35 (1).jpeg",
     "alt": "Оранжевый самосвал: этап подготовки",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2733,11 +3064,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 167,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.35 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.35 (2).jpeg",
     "alt": "Оранжевый самосвал: промежуточный контроль",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2749,11 +3082,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 168,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.35 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.35 (3).jpeg",
     "alt": "Оранжевый самосвал: готовый результат",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2765,11 +3100,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 169,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.35.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.35.jpeg",
     "alt": "Оранжевый самосвал: состояние до работ",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2781,11 +3118,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 170,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.36 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.36 (1).jpeg",
     "alt": "Оранжевый самосвал: этап подготовки",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2797,11 +3136,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 171,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.00.36.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.00.36.jpeg",
     "alt": "Оранжевый самосвал: промежуточный контроль",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2813,11 +3154,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 172,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.09.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.03.09.jpeg",
     "alt": "Оранжевый самосвал: готовый результат",
     "project": "Оранжевый самосвал",
     "stage": "до/после",
@@ -2829,11 +3172,13 @@ const worksItems = [
       "Оранжевый самосвал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 173,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.10 (1).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.10 (1).jpeg",
     "alt": "Серый самосвальный полуприцеп: осмотр поверхности",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -2845,11 +3190,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "осмотр поверхности"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 174,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.10 (2).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.10 (2).jpeg",
     "alt": "Серый самосвальный полуприцеп: зачистка металла",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -2861,11 +3208,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "зачистка металла"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 175,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.10 (3).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.10 (3).jpeg",
     "alt": "Серый самосвальный полуприцеп: подготовка зоны",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -2877,11 +3226,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "подготовка зоны"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 176,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.10.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.10.jpeg",
     "alt": "Серый самосвальный полуприцеп: контроль перед окраской",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -2893,11 +3244,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "контроль перед окраской"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 177,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.11 (1).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.11 (1).jpeg",
     "alt": "Серый самосвальный полуприцеп: осмотр поверхности",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -2909,11 +3262,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "осмотр поверхности"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 178,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.11 (2).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.11 (2).jpeg",
     "alt": "Серый самосвальный полуприцеп: зачистка металла",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -2925,11 +3280,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "зачистка металла"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 179,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.12 (1).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.12 (1).jpeg",
     "alt": "Серый самосвальный полуприцеп: подготовка зоны",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -2941,11 +3298,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "подготовка зоны"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 180,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.12 (3).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.12 (3).jpeg",
     "alt": "Серый самосвальный полуприцеп: контроль перед окраской",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -2957,11 +3316,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "контроль перед окраской"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 181,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.12.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.12.jpeg",
     "alt": "Серый самосвальный полуприцеп: осмотр поверхности",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -2973,11 +3334,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "осмотр поверхности"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 182,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.13 (2).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.13 (2).jpeg",
     "alt": "Серый самосвальный полуприцеп: зачистка металла",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -2989,11 +3352,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "зачистка металла"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 183,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.13 (3).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.13 (3).jpeg",
     "alt": "Серый самосвальный полуприцеп: подготовка зоны",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -3005,11 +3370,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "подготовка зоны"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 184,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.13 (4).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.13 (4).jpeg",
     "alt": "Серый самосвальный полуприцеп: контроль перед окраской",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -3021,11 +3388,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "контроль перед окраской"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 185,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.14 (1).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.14 (1).jpeg",
     "alt": "Серый самосвальный полуприцеп: осмотр поверхности",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -3037,11 +3406,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "осмотр поверхности"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 186,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.03.14.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.03.14.jpeg",
     "alt": "Серый самосвальный полуприцеп: зачистка металла",
     "project": "Серый самосвальный полуприцеп",
     "stage": "подготовка",
@@ -3053,11 +3424,13 @@ const worksItems = [
       "Серый самосвальный полуприцеп",
       "подготовка",
       "зачистка металла"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 187,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.05.15 (1).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.05.15 (1).jpeg",
     "alt": "Ремонт кузова: доработка шва",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3069,11 +3442,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "доработка шва"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 188,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.05.15 (3).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.05.15 (3).jpeg",
     "alt": "Ремонт кузова: подготовка к окраске",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3085,11 +3460,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "подготовка к окраске"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 189,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.05.16 (1).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.05.16 (1).jpeg",
     "alt": "Ремонт кузова: очистка металла",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3101,11 +3478,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "очистка металла"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 190,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.30 (1).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.30 (1).jpeg",
     "alt": "Ремонт кузова: сварочный ремонт",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3117,11 +3496,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "сварочный ремонт"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 191,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.30 (2).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.30 (2).jpeg",
     "alt": "Ремонт кузова: доработка шва",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3133,11 +3514,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "доработка шва"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 192,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.30.jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.30.jpeg",
     "alt": "Ремонт кузова: подготовка к окраске",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3149,11 +3532,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "подготовка к окраске"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 193,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.31 (1).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.31 (1).jpeg",
     "alt": "Ремонт кузова: очистка металла",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3165,11 +3550,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "очистка металла"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 194,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.31.jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.31.jpeg",
     "alt": "Ремонт кузова: сварочный ремонт",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3181,11 +3568,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "сварочный ремонт"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 195,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.37 (1).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.37 (1).jpeg",
     "alt": "Ремонт кузова: доработка шва",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3197,11 +3586,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "доработка шва"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 196,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.37.jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.37.jpeg",
     "alt": "Ремонт кузова: подготовка к окраске",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3213,11 +3604,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "подготовка к окраске"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 197,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.38 (1).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.38 (1).jpeg",
     "alt": "Ремонт кузова: очистка металла",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3229,11 +3622,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "очистка металла"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 198,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.38 (2).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.38 (2).jpeg",
     "alt": "Ремонт кузова: сварочный ремонт",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3245,11 +3640,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "сварочный ремонт"
-    ]
+    ],
+    "category": "svarochnye-raboty",
+    "categoryLabel": "Сварочные работы"
   },
   {
     "id": 199,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.39 (2).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.39 (2).jpeg",
     "alt": "Ремонт кузова: доработка шва",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3261,11 +3658,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "доработка шва"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 200,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.39 (3).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.39 (3).jpeg",
     "alt": "Ремонт кузова: подготовка к окраске",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3277,11 +3676,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "подготовка к окраске"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 201,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.39 (4).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.39 (4).jpeg",
     "alt": "Ремонт кузова: очистка металла",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3293,11 +3694,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "очистка металла"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 202,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.39.jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.39.jpeg",
     "alt": "Ремонт кузова: сварочный ремонт",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3309,11 +3712,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "сварочный ремонт"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 203,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.40 (1).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.40 (1).jpeg",
     "alt": "Ремонт кузова: доработка шва",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3325,11 +3730,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "доработка шва"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 204,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.40.jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.07.40.jpeg",
     "alt": "Ремонт кузова: подготовка к окраске",
     "project": "Ремонт кузова",
     "stage": "пескоструй/сварка",
@@ -3341,11 +3748,13 @@ const worksItems = [
       "Ремонт кузова",
       "пескоструй/сварка",
       "подготовка к окраске"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 205,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.41 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.41 (1).jpeg",
     "alt": "Синий кузов самосвала: сварочный этап",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3357,11 +3766,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "сварочный этап"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 206,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.41 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.41 (2).jpeg",
     "alt": "Синий кузов самосвала: зачистка после ремонта",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3373,11 +3784,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "зачистка после ремонта"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 207,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.41 (4).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.41 (4).jpeg",
     "alt": "Синий кузов самосвала: нанесение покрытия",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3389,11 +3802,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "нанесение покрытия"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 208,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.41.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.41.jpeg",
     "alt": "Синий кузов самосвала: готовая зона",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3405,11 +3820,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "готовая зона"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 209,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.42 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.42 (2).jpeg",
     "alt": "Синий кузов самосвала: сварочный этап",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3421,11 +3838,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "сварочный этап"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 210,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.42 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.42 (3).jpeg",
     "alt": "Синий кузов самосвала: зачистка после ремонта",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3437,11 +3856,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "зачистка после ремонта"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 211,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.42.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.42.jpeg",
     "alt": "Синий кузов самосвала: нанесение покрытия",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3453,11 +3874,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "нанесение покрытия"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 212,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.43 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.43 (1).jpeg",
     "alt": "Синий кузов самосвала: готовая зона",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3469,11 +3892,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "готовая зона"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 213,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.43 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.43 (3).jpeg",
     "alt": "Синий кузов самосвала: сварочный этап",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3485,11 +3910,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "сварочный этап"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 214,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.43.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.43.jpeg",
     "alt": "Синий кузов самосвала: зачистка после ремонта",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3501,11 +3928,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "зачистка после ремонта"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 215,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.44 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.44 (2).jpeg",
     "alt": "Синий кузов самосвала: нанесение покрытия",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3517,11 +3946,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "нанесение покрытия"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 216,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.44 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.44 (3).jpeg",
     "alt": "Синий кузов самосвала: готовая зона",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3533,11 +3964,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "готовая зона"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 217,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.44.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.44.jpeg",
     "alt": "Синий кузов самосвала: сварочный этап",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3549,11 +3982,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "сварочный этап"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 218,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.45 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.07.45 (1).jpeg",
     "alt": "Синий кузов самосвала: зачистка после ремонта",
     "project": "Синий кузов самосвала",
     "stage": "сварка/окраска",
@@ -3565,11 +4000,13 @@ const worksItems = [
       "Синий кузов самосвала",
       "сварка/окраска",
       "зачистка после ремонта"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 219,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.45 (2).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.45 (2).jpeg",
     "alt": "Оранжевая цистерна: контроль слоя",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3581,11 +4018,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "контроль слоя"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 220,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.45 (3).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.45 (3).jpeg",
     "alt": "Оранжевая цистерна: готовая поверхность",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3597,11 +4036,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "готовая поверхность"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 221,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.45.jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.45.jpeg",
     "alt": "Оранжевая цистерна: нанесение грунта",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3613,11 +4054,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "нанесение грунта"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 222,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.46 (1).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.46 (1).jpeg",
     "alt": "Оранжевая цистерна: финишная окраска",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3629,11 +4072,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "финишная окраска"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 223,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.46 (2).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.46 (2).jpeg",
     "alt": "Оранжевая цистерна: контроль слоя",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3645,11 +4090,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "контроль слоя"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 224,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.46 (3).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.46 (3).jpeg",
     "alt": "Оранжевая цистерна: готовая поверхность",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3661,11 +4108,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "готовая поверхность"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 225,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.46.jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.46.jpeg",
     "alt": "Оранжевая цистерна: нанесение грунта",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3677,11 +4126,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "нанесение грунта"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 226,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.48 (1).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.48 (1).jpeg",
     "alt": "Оранжевая цистерна: финишная окраска",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3693,11 +4144,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "финишная окраска"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 227,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.48 (2).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.48 (2).jpeg",
     "alt": "Оранжевая цистерна: контроль слоя",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3709,11 +4162,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "контроль слоя"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 228,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.48 (3).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.48 (3).jpeg",
     "alt": "Оранжевая цистерна: готовая поверхность",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3725,11 +4180,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "готовая поверхность"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 229,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.48.jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.48.jpeg",
     "alt": "Оранжевая цистерна: нанесение грунта",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3741,11 +4198,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "нанесение грунта"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 230,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.49 (1).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.49 (1).jpeg",
     "alt": "Оранжевая цистерна: финишная окраска",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3757,11 +4216,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "финишная окраска"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 231,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.49 (2).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.49 (2).jpeg",
     "alt": "Оранжевая цистерна: контроль слоя",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3773,11 +4234,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "контроль слоя"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 232,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.49 (3).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.49 (3).jpeg",
     "alt": "Оранжевая цистерна: готовая поверхность",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3789,11 +4252,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "готовая поверхность"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 233,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.49 (4).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.49 (4).jpeg",
     "alt": "Оранжевая цистерна: нанесение грунта",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3805,11 +4270,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "нанесение грунта"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 234,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.07.49.jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.07.49.jpeg",
     "alt": "Оранжевая цистерна: финишная окраска",
     "project": "Оранжевая цистерна",
     "stage": "покраска",
@@ -3821,11 +4288,13 @@ const worksItems = [
       "Оранжевая цистерна",
       "покраска",
       "финишная окраска"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 235,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.10.38.jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.10.38.jpeg",
     "alt": "Бортовая платформа: контроль слоя",
     "project": "Бортовая платформа",
     "stage": "покраска",
@@ -3837,11 +4306,13 @@ const worksItems = [
       "Бортовая платформа",
       "покраска",
       "контроль слоя"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 236,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.10.39 (2).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.10.39 (2).jpeg",
     "alt": "Бортовая платформа: готовая поверхность",
     "project": "Бортовая платформа",
     "stage": "покраска",
@@ -3853,11 +4324,13 @@ const worksItems = [
       "Бортовая платформа",
       "покраска",
       "готовая поверхность"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 237,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.10.39 (3).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.10.39 (3).jpeg",
     "alt": "Бортовая платформа: нанесение грунта",
     "project": "Бортовая платформа",
     "stage": "покраска",
@@ -3869,11 +4342,13 @@ const worksItems = [
       "Бортовая платформа",
       "покраска",
       "нанесение грунта"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 238,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.10.39.jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.10.39.jpeg",
     "alt": "Бортовая платформа: финишная окраска",
     "project": "Бортовая платформа",
     "stage": "покраска",
@@ -3885,11 +4360,13 @@ const worksItems = [
       "Бортовая платформа",
       "покраска",
       "финишная окраска"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 239,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.10.40 (1).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.10.40 (1).jpeg",
     "alt": "Бортовая платформа: контроль слоя",
     "project": "Бортовая платформа",
     "stage": "покраска",
@@ -3901,11 +4378,13 @@ const worksItems = [
       "Бортовая платформа",
       "покраска",
       "контроль слоя"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 240,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.10.40 (2).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.10.40 (2).jpeg",
     "alt": "Бортовая платформа: готовая поверхность",
     "project": "Бортовая платформа",
     "stage": "покраска",
@@ -3917,11 +4396,13 @@ const worksItems = [
       "Бортовая платформа",
       "покраска",
       "готовая поверхность"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 241,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.10.40 (3).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.10.40 (3).jpeg",
     "alt": "Бортовая платформа: нанесение грунта",
     "project": "Бортовая платформа",
     "stage": "покраска",
@@ -3933,11 +4414,13 @@ const worksItems = [
       "Бортовая платформа",
       "покраска",
       "нанесение грунта"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 242,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.10.40 (4).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.10.40 (4).jpeg",
     "alt": "Бортовая платформа: финишная окраска",
     "project": "Бортовая платформа",
     "stage": "покраска",
@@ -3949,11 +4432,13 @@ const worksItems = [
       "Бортовая платформа",
       "покраска",
       "финишная окраска"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 243,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.10.40.jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.10.40.jpeg",
     "alt": "Бортовая платформа: контроль слоя",
     "project": "Бортовая платформа",
     "stage": "покраска",
@@ -3965,11 +4450,13 @@ const worksItems = [
       "Бортовая платформа",
       "покраска",
       "контроль слоя"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 244,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.10.41 (1).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.10.41 (1).jpeg",
     "alt": "Бортовая платформа: готовая поверхность",
     "project": "Бортовая платформа",
     "stage": "покраска",
@@ -3981,11 +4468,13 @@ const worksItems = [
       "Бортовая платформа",
       "покраска",
       "готовая поверхность"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 245,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.10.41 (2).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.10.41 (2).jpeg",
     "alt": "Бортовая платформа: нанесение грунта",
     "project": "Бортовая платформа",
     "stage": "покраска",
@@ -3997,11 +4486,13 @@ const worksItems = [
       "Бортовая платформа",
       "покраска",
       "нанесение грунта"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 246,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.10.41 (3).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-11 at 08.10.41 (3).jpeg",
     "alt": "Бортовая платформа: финишная окраска",
     "project": "Бортовая платформа",
     "stage": "покраска",
@@ -4013,11 +4504,13 @@ const worksItems = [
       "Бортовая платформа",
       "покраска",
       "финишная окраска"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 247,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.11.45 (1).jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 08.11.45 (1).jpeg",
     "alt": "Колёсные диски: контроль элемента",
     "project": "Колёсные диски",
     "stage": "детали",
@@ -4029,11 +4522,13 @@ const worksItems = [
       "Колёсные диски",
       "детали",
       "контроль элемента"
-    ]
+    ],
+    "category": "detali-zapchasti",
+    "categoryLabel": "Детали и запчасти"
   },
   {
     "id": 248,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.11.45 (2).jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 08.11.45 (2).jpeg",
     "alt": "Колёсные диски: деталь после работ",
     "project": "Колёсные диски",
     "stage": "детали",
@@ -4045,11 +4540,13 @@ const worksItems = [
       "Колёсные диски",
       "детали",
       "деталь после работ"
-    ]
+    ],
+    "category": "detali-zapchasti",
+    "categoryLabel": "Детали и запчасти"
   },
   {
     "id": 249,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.11.45.jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 08.11.45.jpeg",
     "alt": "Колёсные диски: крупный план детали",
     "project": "Колёсные диски",
     "stage": "детали",
@@ -4061,11 +4558,13 @@ const worksItems = [
       "Колёсные диски",
       "детали",
       "крупный план детали"
-    ]
+    ],
+    "category": "detali-zapchasti",
+    "categoryLabel": "Детали и запчасти"
   },
   {
     "id": 250,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.11.46.jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 08.11.46.jpeg",
     "alt": "Колёсные диски: локальная обработка",
     "project": "Колёсные диски",
     "stage": "детали",
@@ -4077,11 +4576,13 @@ const worksItems = [
       "Колёсные диски",
       "детали",
       "локальная обработка"
-    ]
+    ],
+    "category": "detali-zapchasti",
+    "categoryLabel": "Детали и запчасти"
   },
   {
     "id": 251,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.14.03 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.14.03 (1).jpeg",
     "alt": "Красный самосвал: промежуточный контроль",
     "project": "Красный самосвал",
     "stage": "до/после",
@@ -4093,11 +4594,13 @@ const worksItems = [
       "Красный самосвал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 252,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.14.03 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.14.03 (2).jpeg",
     "alt": "Красный самосвал: готовый результат",
     "project": "Красный самосвал",
     "stage": "до/после",
@@ -4109,11 +4612,13 @@ const worksItems = [
       "Красный самосвал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 253,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.14.03.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.14.03.jpeg",
     "alt": "Красный самосвал: состояние до работ",
     "project": "Красный самосвал",
     "stage": "до/после",
@@ -4125,11 +4630,13 @@ const worksItems = [
       "Красный самосвал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 254,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.14.04 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.14.04 (2).jpeg",
     "alt": "Красный самосвал: этап подготовки",
     "project": "Красный самосвал",
     "stage": "до/после",
@@ -4141,11 +4648,13 @@ const worksItems = [
       "Красный самосвал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 255,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.14.04 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.14.04 (3).jpeg",
     "alt": "Красный самосвал: промежуточный контроль",
     "project": "Красный самосвал",
     "stage": "до/после",
@@ -4157,11 +4666,13 @@ const worksItems = [
       "Красный самосвал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 256,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.14.04.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.14.04.jpeg",
     "alt": "Красный самосвал: готовый результат",
     "project": "Красный самосвал",
     "stage": "до/после",
@@ -4173,11 +4684,13 @@ const worksItems = [
       "Красный самосвал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 257,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.14.05 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.14.05 (2).jpeg",
     "alt": "Красный самосвал: состояние до работ",
     "project": "Красный самосвал",
     "stage": "до/после",
@@ -4189,11 +4702,13 @@ const worksItems = [
       "Красный самосвал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 258,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.14.05.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.14.05.jpeg",
     "alt": "Красный самосвал: этап подготовки",
     "project": "Красный самосвал",
     "stage": "до/после",
@@ -4205,11 +4720,13 @@ const worksItems = [
       "Красный самосвал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 259,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.14.06 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.14.06 (3).jpeg",
     "alt": "Красный самосвал: промежуточный контроль",
     "project": "Красный самосвал",
     "stage": "до/после",
@@ -4221,11 +4738,13 @@ const worksItems = [
       "Красный самосвал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 260,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.14.07 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.14.07 (1).jpeg",
     "alt": "Красный самосвал: готовый результат",
     "project": "Красный самосвал",
     "stage": "до/после",
@@ -4237,11 +4756,13 @@ const worksItems = [
       "Красный самосвал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 261,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.14.07 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.14.07 (2).jpeg",
     "alt": "Красный самосвал: состояние до работ",
     "project": "Красный самосвал",
     "stage": "до/после",
@@ -4253,11 +4774,13 @@ const worksItems = [
       "Красный самосвал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 262,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.14.07.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.14.07.jpeg",
     "alt": "Красный самосвал: этап подготовки",
     "project": "Красный самосвал",
     "stage": "до/после",
@@ -4269,11 +4792,13 @@ const worksItems = [
       "Красный самосвал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 263,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.16.37 (1).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 08.16.37 (1).jpeg",
     "alt": "Крановые элементы: обработка",
     "project": "Крановые элементы",
     "stage": "окраска",
@@ -4285,11 +4810,13 @@ const worksItems = [
       "Крановые элементы",
       "окраска",
       "обработка"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 264,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.16.37 (2).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 08.16.37 (2).jpeg",
     "alt": "Крановые элементы: контроль",
     "project": "Крановые элементы",
     "stage": "окраска",
@@ -4301,11 +4828,13 @@ const worksItems = [
       "Крановые элементы",
       "окраска",
       "контроль"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 265,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.16.37 (3).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 08.16.37 (3).jpeg",
     "alt": "Крановые элементы: рабочий этап",
     "project": "Крановые элементы",
     "stage": "окраска",
@@ -4317,11 +4846,13 @@ const worksItems = [
       "Крановые элементы",
       "окраска",
       "рабочий этап"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 266,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.16.39 (1).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 08.16.39 (1).jpeg",
     "alt": "Крановые элементы: подготовка",
     "project": "Крановые элементы",
     "stage": "окраска",
@@ -4333,11 +4864,13 @@ const worksItems = [
       "Крановые элементы",
       "окраска",
       "подготовка"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 267,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.16.39 (3).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 08.16.39 (3).jpeg",
     "alt": "Крановые элементы: обработка",
     "project": "Крановые элементы",
     "stage": "окраска",
@@ -4349,11 +4882,13 @@ const worksItems = [
       "Крановые элементы",
       "окраска",
       "обработка"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 268,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.16.40 (1).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 08.16.40 (1).jpeg",
     "alt": "Крановые элементы: контроль",
     "project": "Крановые элементы",
     "stage": "окраска",
@@ -4365,11 +4900,13 @@ const worksItems = [
       "Крановые элементы",
       "окраска",
       "контроль"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 269,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.16.40 (2).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 08.16.40 (2).jpeg",
     "alt": "Крановые элементы: рабочий этап",
     "project": "Крановые элементы",
     "stage": "окраска",
@@ -4381,11 +4918,13 @@ const worksItems = [
       "Крановые элементы",
       "окраска",
       "рабочий этап"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 270,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.16.41 (1).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 08.16.41 (1).jpeg",
     "alt": "Крановые элементы: подготовка",
     "project": "Крановые элементы",
     "stage": "окраска",
@@ -4397,11 +4936,13 @@ const worksItems = [
       "Крановые элементы",
       "окраска",
       "подготовка"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 271,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.16.42 (2).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 08.16.42 (2).jpeg",
     "alt": "Крановые элементы: обработка",
     "project": "Крановые элементы",
     "stage": "окраска",
@@ -4413,11 +4954,13 @@ const worksItems = [
       "Крановые элементы",
       "окраска",
       "обработка"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 272,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.16.42 (3).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 08.16.42 (3).jpeg",
     "alt": "Крановые элементы: контроль",
     "project": "Крановые элементы",
     "stage": "окраска",
@@ -4429,11 +4972,13 @@ const worksItems = [
       "Крановые элементы",
       "окраска",
       "контроль"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 273,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.16.43 (3).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 08.16.43 (3).jpeg",
     "alt": "Крановые элементы: рабочий этап",
     "project": "Крановые элементы",
     "stage": "окраска",
@@ -4445,11 +4990,13 @@ const worksItems = [
       "Крановые элементы",
       "окраска",
       "рабочий этап"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 274,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.16.44 (2).jpeg",
+    "src": "./assets/allimages/krany-manipulyatory/WhatsApp Image 2025-11-11 at 08.16.44 (2).jpeg",
     "alt": "Крановые элементы: подготовка",
     "project": "Крановые элементы",
     "stage": "окраска",
@@ -4461,11 +5008,13 @@ const worksItems = [
       "Крановые элементы",
       "окраска",
       "подготовка"
-    ]
+    ],
+    "category": "krany-manipulyatory",
+    "categoryLabel": "Краны|манипуляторы"
   },
   {
     "id": 275,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.18.21.jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.18.21.jpeg",
     "alt": "Кузов легкового авто: обработка поверхности",
     "project": "Кузов легкового авто",
     "stage": "пескоструй",
@@ -4477,11 +5026,13 @@ const worksItems = [
       "Кузов легкового авто",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 276,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.18.22 (1).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.18.22 (1).jpeg",
     "alt": "Кузов легкового авто: подготовка под грунт",
     "project": "Кузов легкового авто",
     "stage": "пескоструй",
@@ -4493,11 +5044,13 @@ const worksItems = [
       "Кузов легкового авто",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 277,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.18.22 (2).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.18.22 (2).jpeg",
     "alt": "Кузов легкового авто: абразивная очистка",
     "project": "Кузов легкового авто",
     "stage": "пескоструй",
@@ -4509,11 +5062,13 @@ const worksItems = [
       "Кузов легкового авто",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 278,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.18.22.jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.18.22.jpeg",
     "alt": "Кузов легкового авто: снятие коррозии",
     "project": "Кузов легкового авто",
     "stage": "пескоструй",
@@ -4525,11 +5080,13 @@ const worksItems = [
       "Кузов легкового авто",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 279,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.18.23 (1).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.18.23 (1).jpeg",
     "alt": "Кузов легкового авто: обработка поверхности",
     "project": "Кузов легкового авто",
     "stage": "пескоструй",
@@ -4541,11 +5098,13 @@ const worksItems = [
       "Кузов легкового авто",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 280,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.18.23 (2).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.18.23 (2).jpeg",
     "alt": "Кузов легкового авто: подготовка под грунт",
     "project": "Кузов легкового авто",
     "stage": "пескоструй",
@@ -4557,11 +5116,13 @@ const worksItems = [
       "Кузов легкового авто",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 281,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.18.23 (3).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.18.23 (3).jpeg",
     "alt": "Кузов легкового авто: абразивная очистка",
     "project": "Кузов легкового авто",
     "stage": "пескоструй",
@@ -4573,11 +5134,13 @@ const worksItems = [
       "Кузов легкового авто",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 282,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.18.24 (1).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.18.24 (1).jpeg",
     "alt": "Кузов легкового авто: снятие коррозии",
     "project": "Кузов легкового авто",
     "stage": "пескоструй",
@@ -4589,11 +5152,13 @@ const worksItems = [
       "Кузов легкового авто",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 283,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.18.24 (2).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.18.24 (2).jpeg",
     "alt": "Кузов легкового авто: обработка поверхности",
     "project": "Кузов легкового авто",
     "stage": "пескоструй",
@@ -4605,11 +5170,13 @@ const worksItems = [
       "Кузов легкового авто",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 284,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.18.24 (3).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.18.24 (3).jpeg",
     "alt": "Кузов легкового авто: подготовка под грунт",
     "project": "Кузов легкового авто",
     "stage": "пескоструй",
@@ -4621,11 +5188,13 @@ const worksItems = [
       "Кузов легкового авто",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 285,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.18.24.jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.18.24.jpeg",
     "alt": "Кузов легкового авто: абразивная очистка",
     "project": "Кузов легкового авто",
     "stage": "пескоструй",
@@ -4637,11 +5206,13 @@ const worksItems = [
       "Кузов легкового авто",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 286,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.18.25 (2).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.18.25 (2).jpeg",
     "alt": "Кузов легкового авто: снятие коррозии",
     "project": "Кузов легкового авто",
     "stage": "пескоструй",
@@ -4653,11 +5224,13 @@ const worksItems = [
       "Кузов легкового авто",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 287,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.21.30 (1).jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 08.21.30 (1).jpeg",
     "alt": "Плиты и детали: обработка поверхности",
     "project": "Плиты и детали",
     "stage": "пескоструй",
@@ -4669,11 +5242,13 @@ const worksItems = [
       "Плиты и детали",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 288,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.21.30 (2).jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 08.21.30 (2).jpeg",
     "alt": "Плиты и детали: подготовка под грунт",
     "project": "Плиты и детали",
     "stage": "пескоструй",
@@ -4685,11 +5260,13 @@ const worksItems = [
       "Плиты и детали",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 289,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.21.30.jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 08.21.30.jpeg",
     "alt": "Плиты и детали: абразивная очистка",
     "project": "Плиты и детали",
     "stage": "пескоструй",
@@ -4701,11 +5278,13 @@ const worksItems = [
       "Плиты и детали",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 290,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.21.31 (1).jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 08.21.31 (1).jpeg",
     "alt": "Плиты и детали: снятие коррозии",
     "project": "Плиты и детали",
     "stage": "пескоструй",
@@ -4717,11 +5296,13 @@ const worksItems = [
       "Плиты и детали",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 291,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.21.31 (2).jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 08.21.31 (2).jpeg",
     "alt": "Плиты и детали: обработка поверхности",
     "project": "Плиты и детали",
     "stage": "пескоструй",
@@ -4733,11 +5314,13 @@ const worksItems = [
       "Плиты и детали",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 292,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.21.31.jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 08.21.31.jpeg",
     "alt": "Плиты и детали: подготовка под грунт",
     "project": "Плиты и детали",
     "stage": "пескоструй",
@@ -4749,11 +5332,13 @@ const worksItems = [
       "Плиты и детали",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 293,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.21.32 (2).jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 08.21.32 (2).jpeg",
     "alt": "Плиты и детали: абразивная очистка",
     "project": "Плиты и детали",
     "stage": "пескоструй",
@@ -4765,11 +5350,13 @@ const worksItems = [
       "Плиты и детали",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 294,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.21.32 (3).jpeg",
+    "src": "./assets/allimages/detali-zapchasti/WhatsApp Image 2025-11-11 at 08.21.32 (3).jpeg",
     "alt": "Плиты и детали: снятие коррозии",
     "project": "Плиты и детали",
     "stage": "пескоструй",
@@ -4781,11 +5368,13 @@ const worksItems = [
       "Плиты и детали",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "drugie-raboty",
+    "categoryLabel": "Другие работы"
   },
   {
     "id": 295,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.22.52.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.22.52.jpeg",
     "alt": "Красный самосвал WIELTON: промежуточный контроль",
     "project": "Красный самосвал WIELTON",
     "stage": "до/после",
@@ -4797,11 +5386,13 @@ const worksItems = [
       "Красный самосвал WIELTON",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 296,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.22.53 (2).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.22.53 (2).jpeg",
     "alt": "Красный самосвал WIELTON: готовый результат",
     "project": "Красный самосвал WIELTON",
     "stage": "до/после",
@@ -4813,11 +5404,13 @@ const worksItems = [
       "Красный самосвал WIELTON",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 297,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.22.53 (3).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.22.53 (3).jpeg",
     "alt": "Красный самосвал WIELTON: состояние до работ",
     "project": "Красный самосвал WIELTON",
     "stage": "до/после",
@@ -4829,11 +5422,13 @@ const worksItems = [
       "Красный самосвал WIELTON",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 298,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.22.54 (2).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.22.54 (2).jpeg",
     "alt": "Красный самосвал WIELTON: этап подготовки",
     "project": "Красный самосвал WIELTON",
     "stage": "до/после",
@@ -4845,11 +5440,13 @@ const worksItems = [
       "Красный самосвал WIELTON",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 299,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.22.54 (3).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.22.54 (3).jpeg",
     "alt": "Красный самосвал WIELTON: промежуточный контроль",
     "project": "Красный самосвал WIELTON",
     "stage": "до/после",
@@ -4861,11 +5458,13 @@ const worksItems = [
       "Красный самосвал WIELTON",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 300,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.22.54.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.22.54.jpeg",
     "alt": "Красный самосвал WIELTON: готовый результат",
     "project": "Красный самосвал WIELTON",
     "stage": "до/после",
@@ -4877,11 +5476,13 @@ const worksItems = [
       "Красный самосвал WIELTON",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 301,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.22.55 (1).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.22.55 (1).jpeg",
     "alt": "Красный самосвал WIELTON: состояние до работ",
     "project": "Красный самосвал WIELTON",
     "stage": "до/после",
@@ -4893,11 +5494,13 @@ const worksItems = [
       "Красный самосвал WIELTON",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 302,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.22.56.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.22.56.jpeg",
     "alt": "Красный самосвал WIELTON: этап подготовки",
     "project": "Красный самосвал WIELTON",
     "stage": "до/после",
@@ -4909,11 +5512,13 @@ const worksItems = [
       "Красный самосвал WIELTON",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 303,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.23.29 (1).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.23.29 (1).jpeg",
     "alt": "Рама грузовика: обработка поверхности",
     "project": "Рама грузовика",
     "stage": "пескоструй",
@@ -4925,11 +5530,13 @@ const worksItems = [
       "Рама грузовика",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 304,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.23.29 (2).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.23.29 (2).jpeg",
     "alt": "Рама грузовика: подготовка под грунт",
     "project": "Рама грузовика",
     "stage": "пескоструй",
@@ -4941,11 +5548,13 @@ const worksItems = [
       "Рама грузовика",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 305,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.23.29 (3).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.23.29 (3).jpeg",
     "alt": "Рама грузовика: абразивная очистка",
     "project": "Рама грузовика",
     "stage": "пескоструй",
@@ -4957,11 +5566,13 @@ const worksItems = [
       "Рама грузовика",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 306,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.23.30 (2).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.23.30 (2).jpeg",
     "alt": "Рама грузовика: снятие коррозии",
     "project": "Рама грузовика",
     "stage": "пескоструй",
@@ -4973,11 +5584,13 @@ const worksItems = [
       "Рама грузовика",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 307,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.23.30 (3).jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.23.30 (3).jpeg",
     "alt": "Рама грузовика: обработка поверхности",
     "project": "Рама грузовика",
     "stage": "пескоструй",
@@ -4989,11 +5602,13 @@ const worksItems = [
       "Рама грузовика",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 308,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.23.30.jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.23.30.jpeg",
     "alt": "Рама грузовика: подготовка под грунт",
     "project": "Рама грузовика",
     "stage": "пескоструй",
@@ -5005,11 +5620,13 @@ const worksItems = [
       "Рама грузовика",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 309,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.23.31.jpeg",
+    "src": "./assets/allimages/kuzova-ramy/WhatsApp Image 2025-11-11 at 08.23.31.jpeg",
     "alt": "Рама грузовика: абразивная очистка",
     "project": "Рама грузовика",
     "stage": "пескоструй",
@@ -5021,11 +5638,13 @@ const worksItems = [
       "Рама грузовика",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "kuzova-ramy",
+    "categoryLabel": "Кузова и рамы"
   },
   {
     "id": 310,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.24.18 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.24.18 (1).jpeg",
     "alt": "Жёлтый самосвал: локальная доработка",
     "project": "Жёлтый самосвал",
     "stage": "контроль/покраска",
@@ -5037,11 +5656,13 @@ const worksItems = [
       "Жёлтый самосвал",
       "контроль/покраска",
       "локальная доработка"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 311,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.24.18 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.24.18 (2).jpeg",
     "alt": "Жёлтый самосвал: финишная окраска",
     "project": "Жёлтый самосвал",
     "stage": "контроль/покраска",
@@ -5053,11 +5674,13 @@ const worksItems = [
       "Жёлтый самосвал",
       "контроль/покраска",
       "финишная окраска"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 312,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.24.18.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.24.18.jpeg",
     "alt": "Жёлтый самосвал: проверка результата",
     "project": "Жёлтый самосвал",
     "stage": "контроль/покраска",
@@ -5069,11 +5692,13 @@ const worksItems = [
       "Жёлтый самосвал",
       "контроль/покраска",
       "проверка результата"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 313,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.24.19 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.24.19 (1).jpeg",
     "alt": "Жёлтый самосвал: измерение и контроль",
     "project": "Жёлтый самосвал",
     "stage": "контроль/покраска",
@@ -5085,11 +5710,13 @@ const worksItems = [
       "Жёлтый самосвал",
       "контроль/покраска",
       "измерение и контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 314,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.24.19 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.24.19 (2).jpeg",
     "alt": "Жёлтый самосвал: локальная доработка",
     "project": "Жёлтый самосвал",
     "stage": "контроль/покраска",
@@ -5101,11 +5728,13 @@ const worksItems = [
       "Жёлтый самосвал",
       "контроль/покраска",
       "локальная доработка"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 315,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.24.21 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.24.21 (2).jpeg",
     "alt": "Жёлтый самосвал: финишная окраска",
     "project": "Жёлтый самосвал",
     "stage": "контроль/покраска",
@@ -5117,11 +5746,13 @@ const worksItems = [
       "Жёлтый самосвал",
       "контроль/покраска",
       "финишная окраска"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 316,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.26.03 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.26.03 (1).jpeg",
     "alt": "Жёлтый самосвал: проверка результата",
     "project": "Жёлтый самосвал",
     "stage": "контроль/покраска",
@@ -5133,11 +5764,13 @@ const worksItems = [
       "Жёлтый самосвал",
       "контроль/покраска",
       "проверка результата"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 317,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.26.03 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.26.03 (2).jpeg",
     "alt": "Жёлтый самосвал: измерение и контроль",
     "project": "Жёлтый самосвал",
     "stage": "контроль/покраска",
@@ -5149,11 +5782,13 @@ const worksItems = [
       "Жёлтый самосвал",
       "контроль/покраска",
       "измерение и контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 318,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.26.03 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.26.03 (3).jpeg",
     "alt": "Жёлтый самосвал: локальная доработка",
     "project": "Жёлтый самосвал",
     "stage": "контроль/покраска",
@@ -5165,11 +5800,13 @@ const worksItems = [
       "Жёлтый самосвал",
       "контроль/покраска",
       "локальная доработка"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 319,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.26.03.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.26.03.jpeg",
     "alt": "Жёлтый самосвал: финишная окраска",
     "project": "Жёлтый самосвал",
     "stage": "контроль/покраска",
@@ -5181,11 +5818,13 @@ const worksItems = [
       "Жёлтый самосвал",
       "контроль/покраска",
       "финишная окраска"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 320,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.26.04 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.26.04 (2).jpeg",
     "alt": "Жёлтый самосвал: проверка результата",
     "project": "Жёлтый самосвал",
     "stage": "контроль/покраска",
@@ -5197,11 +5836,13 @@ const worksItems = [
       "Жёлтый самосвал",
       "контроль/покраска",
       "проверка результата"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 321,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.28.11.jpeg",
+    "src": "./assets/allimages/prom-oborudovanie/WhatsApp Image 2025-11-11 at 08.28.11.jpeg",
     "alt": "Промышленный агрегат: нанесение грунта",
     "project": "Промышленный агрегат",
     "stage": "покраска",
@@ -5213,11 +5854,13 @@ const worksItems = [
       "Промышленный агрегат",
       "покраска",
       "нанесение грунта"
-    ]
+    ],
+    "category": "prom-oborudovanie",
+    "categoryLabel": "Промышленное оборудование"
   },
   {
     "id": 322,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.28.12 (2).jpeg",
+    "src": "./assets/allimages/prom-oborudovanie/WhatsApp Image 2025-11-11 at 08.28.12 (2).jpeg",
     "alt": "Промышленный агрегат: финишная окраска",
     "project": "Промышленный агрегат",
     "stage": "покраска",
@@ -5229,11 +5872,13 @@ const worksItems = [
       "Промышленный агрегат",
       "покраска",
       "финишная окраска"
-    ]
+    ],
+    "category": "prom-oborudovanie",
+    "categoryLabel": "Промышленное оборудование"
   },
   {
     "id": 323,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.28.12.jpeg",
+    "src": "./assets/allimages/prom-oborudovanie/WhatsApp Image 2025-11-11 at 08.28.12.jpeg",
     "alt": "Промышленный агрегат: контроль слоя",
     "project": "Промышленный агрегат",
     "stage": "покраска",
@@ -5245,11 +5890,13 @@ const worksItems = [
       "Промышленный агрегат",
       "покраска",
       "контроль слоя"
-    ]
+    ],
+    "category": "prom-oborudovanie",
+    "categoryLabel": "Промышленное оборудование"
   },
   {
     "id": 324,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.28.13 (1).jpeg",
+    "src": "./assets/allimages/prom-oborudovanie/WhatsApp Image 2025-11-11 at 08.28.13 (1).jpeg",
     "alt": "Промышленный агрегат: готовая поверхность",
     "project": "Промышленный агрегат",
     "stage": "покраска",
@@ -5261,11 +5908,13 @@ const worksItems = [
       "Промышленный агрегат",
       "покраска",
       "готовая поверхность"
-    ]
+    ],
+    "category": "prom-oborudovanie",
+    "categoryLabel": "Промышленное оборудование"
   },
   {
     "id": 325,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.28.13.jpeg",
+    "src": "./assets/allimages/prom-oborudovanie/WhatsApp Image 2025-11-11 at 08.28.13.jpeg",
     "alt": "Промышленный агрегат: нанесение грунта",
     "project": "Промышленный агрегат",
     "stage": "покраска",
@@ -5277,11 +5926,13 @@ const worksItems = [
       "Промышленный агрегат",
       "покраска",
       "нанесение грунта"
-    ]
+    ],
+    "category": "prom-oborudovanie",
+    "categoryLabel": "Промышленное оборудование"
   },
   {
     "id": 326,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.49 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.49 (1).jpeg",
     "alt": "Оранжевый КамАЗ: этап подготовки",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5293,11 +5944,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 327,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.50 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.50 (1).jpeg",
     "alt": "Оранжевый КамАЗ: промежуточный контроль",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5309,11 +5962,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 328,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.53 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.53 (2).jpeg",
     "alt": "Оранжевый КамАЗ: готовый результат",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5325,11 +5980,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 329,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.53 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.53 (3).jpeg",
     "alt": "Оранжевый КамАЗ: состояние до работ",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5341,11 +5998,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 330,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.53 (4).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.53 (4).jpeg",
     "alt": "Оранжевый КамАЗ: этап подготовки",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5357,11 +6016,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 331,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.54 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.54 (1).jpeg",
     "alt": "Оранжевый КамАЗ: промежуточный контроль",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5373,11 +6034,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 332,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.54 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.54 (2).jpeg",
     "alt": "Оранжевый КамАЗ: готовый результат",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5389,11 +6052,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 333,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.54.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.54.jpeg",
     "alt": "Оранжевый КамАЗ: состояние до работ",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5405,11 +6070,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 334,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.55 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.55 (3).jpeg",
     "alt": "Оранжевый КамАЗ: этап подготовки",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5421,11 +6088,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 335,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.56 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.56 (3).jpeg",
     "alt": "Оранжевый КамАЗ: промежуточный контроль",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5437,11 +6106,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 336,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.56 (4).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.56 (4).jpeg",
     "alt": "Оранжевый КамАЗ: готовый результат",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5453,11 +6124,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 337,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.56.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.56.jpeg",
     "alt": "Оранжевый КамАЗ: состояние до работ",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5469,11 +6142,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 338,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.57 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.57 (1).jpeg",
     "alt": "Оранжевый КамАЗ: этап подготовки",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5485,11 +6160,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 339,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.57 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.57 (2).jpeg",
     "alt": "Оранжевый КамАЗ: промежуточный контроль",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5501,11 +6178,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 340,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.57 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.57 (3).jpeg",
     "alt": "Оранжевый КамАЗ: готовый результат",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5517,11 +6196,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 341,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.57.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.57.jpeg",
     "alt": "Оранжевый КамАЗ: состояние до работ",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5533,11 +6214,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 342,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.58 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.58 (1).jpeg",
     "alt": "Оранжевый КамАЗ: этап подготовки",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5549,11 +6232,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 343,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.58 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.58 (2).jpeg",
     "alt": "Оранжевый КамАЗ: промежуточный контроль",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5565,11 +6250,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 344,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.58 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.58 (3).jpeg",
     "alt": "Оранжевый КамАЗ: готовый результат",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5581,11 +6268,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 345,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.58.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.58.jpeg",
     "alt": "Оранжевый КамАЗ: состояние до работ",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5597,11 +6286,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 346,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.59 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.59 (1).jpeg",
     "alt": "Оранжевый КамАЗ: этап подготовки",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5613,11 +6304,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 347,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.59 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.59 (2).jpeg",
     "alt": "Оранжевый КамАЗ: промежуточный контроль",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5629,11 +6322,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 348,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.59 (3).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.59 (3).jpeg",
     "alt": "Оранжевый КамАЗ: готовый результат",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5645,11 +6340,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 349,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.30.59.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.30.59.jpeg",
     "alt": "Оранжевый КамАЗ: состояние до работ",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5661,11 +6358,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 350,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.31.00 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.31.00 (1).jpeg",
     "alt": "Оранжевый КамАЗ: этап подготовки",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5677,11 +6376,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 351,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.31.00 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.31.00 (2).jpeg",
     "alt": "Оранжевый КамАЗ: промежуточный контроль",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5693,11 +6394,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 352,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.31.00.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-11 at 08.31.00.jpeg",
     "alt": "Оранжевый КамАЗ: готовый результат",
     "project": "Оранжевый КамАЗ",
     "stage": "до/после",
@@ -5709,11 +6412,13 @@ const worksItems = [
       "Оранжевый КамАЗ",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 353,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.36.14.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.36.14.jpeg",
     "alt": "Серый/красный полуприцеп: состояние до работ",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5725,11 +6430,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 354,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.36.15 (1).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.36.15 (1).jpeg",
     "alt": "Серый/красный полуприцеп: этап подготовки",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5741,11 +6448,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 355,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.36.15 (2).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.36.15 (2).jpeg",
     "alt": "Серый/красный полуприцеп: промежуточный контроль",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5757,11 +6466,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 356,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.36.15 (3).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.36.15 (3).jpeg",
     "alt": "Серый/красный полуприцеп: готовый результат",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5773,11 +6484,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 357,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.36.15 (4).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.36.15 (4).jpeg",
     "alt": "Серый/красный полуприцеп: состояние до работ",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5789,11 +6502,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 358,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.36.16 (1).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.36.16 (1).jpeg",
     "alt": "Серый/красный полуприцеп: этап подготовки",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5805,11 +6520,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 359,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.36.16 (3).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.36.16 (3).jpeg",
     "alt": "Серый/красный полуприцеп: промежуточный контроль",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5821,11 +6538,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 360,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.36.17 (1).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.36.17 (1).jpeg",
     "alt": "Серый/красный полуприцеп: готовый результат",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5837,11 +6556,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 361,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.36.17 (2).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.36.17 (2).jpeg",
     "alt": "Серый/красный полуприцеп: состояние до работ",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5853,11 +6574,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 362,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.36.17 (3).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.36.17 (3).jpeg",
     "alt": "Серый/красный полуприцеп: этап подготовки",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5869,11 +6592,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 363,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.36.17 (4).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.36.17 (4).jpeg",
     "alt": "Серый/красный полуприцеп: промежуточный контроль",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5885,11 +6610,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 364,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.36.17.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.36.17.jpeg",
     "alt": "Серый/красный полуприцеп: готовый результат",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5901,11 +6628,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 365,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.36.18.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.36.18.jpeg",
     "alt": "Серый/красный полуприцеп: состояние до работ",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5917,11 +6646,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 366,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.37.39 (1).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.37.39 (1).jpeg",
     "alt": "Серый/красный полуприцеп: этап подготовки",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5933,11 +6664,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 367,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.37.39 (2).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.37.39 (2).jpeg",
     "alt": "Серый/красный полуприцеп: промежуточный контроль",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5949,11 +6682,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 368,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.37.39.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-11 at 08.37.39.jpeg",
     "alt": "Серый/красный полуприцеп: готовый результат",
     "project": "Серый/красный полуприцеп",
     "stage": "до/после",
@@ -5965,11 +6700,13 @@ const worksItems = [
       "Серый/красный полуприцеп",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 369,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.40.37.jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 08.40.37.jpeg",
     "alt": "Деревянный дом: обработка дерева",
     "project": "Деревянный дом",
     "stage": "покрытие дерева",
@@ -5981,11 +6718,13 @@ const worksItems = [
       "Деревянный дом",
       "покрытие дерева",
       "обработка дерева"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 370,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.40.38 (1).jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 08.40.38 (1).jpeg",
     "alt": "Деревянный дом: защитный состав",
     "project": "Деревянный дом",
     "stage": "покрытие дерева",
@@ -5997,11 +6736,13 @@ const worksItems = [
       "Деревянный дом",
       "покрытие дерева",
       "защитный состав"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 371,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.40.38 (2).jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 08.40.38 (2).jpeg",
     "alt": "Деревянный дом: декоративный финиш",
     "project": "Деревянный дом",
     "stage": "покрытие дерева",
@@ -6013,11 +6754,13 @@ const worksItems = [
       "Деревянный дом",
       "покрытие дерева",
       "декоративный финиш"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 372,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.40.38 (3).jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 08.40.38 (3).jpeg",
     "alt": "Деревянный дом: готовая поверхность",
     "project": "Деревянный дом",
     "stage": "покрытие дерева",
@@ -6029,11 +6772,13 @@ const worksItems = [
       "Деревянный дом",
       "покрытие дерева",
       "готовая поверхность"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 373,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.40.38.jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 08.40.38.jpeg",
     "alt": "Деревянный дом: обработка дерева",
     "project": "Деревянный дом",
     "stage": "покрытие дерева",
@@ -6045,11 +6790,13 @@ const worksItems = [
       "Деревянный дом",
       "покрытие дерева",
       "обработка дерева"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 374,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.40.39 (2).jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 08.40.39 (2).jpeg",
     "alt": "Деревянный дом: защитный состав",
     "project": "Деревянный дом",
     "stage": "покрытие дерева",
@@ -6061,11 +6808,13 @@ const worksItems = [
       "Деревянный дом",
       "покрытие дерева",
       "защитный состав"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 375,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.40.39 (3).jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 08.40.39 (3).jpeg",
     "alt": "Деревянный дом: декоративный финиш",
     "project": "Деревянный дом",
     "stage": "покрытие дерева",
@@ -6077,11 +6826,13 @@ const worksItems = [
       "Деревянный дом",
       "покрытие дерева",
       "декоративный финиш"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 376,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.40.39.jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 08.40.39.jpeg",
     "alt": "Деревянный дом: готовая поверхность",
     "project": "Деревянный дом",
     "stage": "покрытие дерева",
@@ -6093,11 +6844,13 @@ const worksItems = [
       "Деревянный дом",
       "покрытие дерева",
       "готовая поверхность"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 377,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-11 at 08.40.40.jpeg",
+    "src": "./assets/allimages/metall-fasad-derevo/WhatsApp Image 2025-11-11 at 08.40.40.jpeg",
     "alt": "Деревянный дом: обработка дерева",
     "project": "Деревянный дом",
     "stage": "покрытие дерева",
@@ -6109,11 +6862,13 @@ const worksItems = [
       "Деревянный дом",
       "покрытие дерева",
       "обработка дерева"
-    ]
+    ],
+    "category": "metall-fasad-derevo",
+    "categoryLabel": "Металл, фасады и дерево"
   },
   {
     "id": 378,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.03 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-12 at 12.59.03 (1).jpeg",
     "alt": "Оранжевая кабина: локальная обработка",
     "project": "Оранжевая кабина",
     "stage": "детали",
@@ -6125,11 +6880,13 @@ const worksItems = [
       "Оранжевая кабина",
       "детали",
       "локальная обработка"
-    ]
+    ],
+    "category": "detali-zapchasti",
+    "categoryLabel": "Детали и запчасти"
   },
   {
     "id": 379,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.03 (2).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-12 at 12.59.03 (2).jpeg",
     "alt": "Оранжевая кабина: контроль элемента",
     "project": "Оранжевая кабина",
     "stage": "детали",
@@ -6141,11 +6898,13 @@ const worksItems = [
       "Оранжевая кабина",
       "детали",
       "контроль элемента"
-    ]
+    ],
+    "category": "detali-zapchasti",
+    "categoryLabel": "Детали и запчасти"
   },
   {
     "id": 380,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.03.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-12 at 12.59.03.jpeg",
     "alt": "Оранжевая кабина: деталь после работ",
     "project": "Оранжевая кабина",
     "stage": "детали",
@@ -6157,11 +6916,13 @@ const worksItems = [
       "Оранжевая кабина",
       "детали",
       "деталь после работ"
-    ]
+    ],
+    "category": "detali-zapchasti",
+    "categoryLabel": "Детали и запчасти"
   },
   {
     "id": 381,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.04 (1).jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-12 at 12.59.04 (1).jpeg",
     "alt": "Оранжевая кабина: крупный план детали",
     "project": "Оранжевая кабина",
     "stage": "детали",
@@ -6173,11 +6934,13 @@ const worksItems = [
       "Оранжевая кабина",
       "детали",
       "крупный план детали"
-    ]
+    ],
+    "category": "detali-zapchasti",
+    "categoryLabel": "Детали и запчасти"
   },
   {
     "id": 382,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.04.jpeg",
+    "src": "./assets/allimages/kamazy/WhatsApp Image 2025-11-12 at 12.59.04.jpeg",
     "alt": "Оранжевая кабина: локальная обработка",
     "project": "Оранжевая кабина",
     "stage": "детали",
@@ -6189,11 +6952,13 @@ const worksItems = [
       "Оранжевая кабина",
       "детали",
       "локальная обработка"
-    ]
+    ],
+    "category": "kamazy",
+    "categoryLabel": "Битумовозы"
   },
   {
     "id": 383,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.05.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.05.jpeg",
     "alt": "Низкорамный трал: промежуточный контроль",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6205,11 +6970,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 384,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.07.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.07.jpeg",
     "alt": "Низкорамный трал: готовый результат",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6221,11 +6988,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 385,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.08 (1).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.08 (1).jpeg",
     "alt": "Низкорамный трал: состояние до работ",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6237,11 +7006,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 386,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.08 (2).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.08 (2).jpeg",
     "alt": "Низкорамный трал: этап подготовки",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6253,11 +7024,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 387,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.08.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.08.jpeg",
     "alt": "Низкорамный трал: промежуточный контроль",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6269,11 +7042,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 388,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.09 (1).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.09 (1).jpeg",
     "alt": "Низкорамный трал: готовый результат",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6285,11 +7060,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 389,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.09 (2).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.09 (2).jpeg",
     "alt": "Низкорамный трал: состояние до работ",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6301,11 +7078,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 390,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.09.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.09.jpeg",
     "alt": "Низкорамный трал: этап подготовки",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6317,11 +7096,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 391,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.11 (1).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.11 (1).jpeg",
     "alt": "Низкорамный трал: промежуточный контроль",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6333,11 +7114,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 392,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.11.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.11.jpeg",
     "alt": "Низкорамный трал: готовый результат",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6349,11 +7132,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 393,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.22 (1).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.22 (1).jpeg",
     "alt": "Низкорамный трал: состояние до работ",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6365,11 +7150,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 394,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.22 (2).jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.22 (2).jpeg",
     "alt": "Низкорамный трал: этап подготовки",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6381,11 +7168,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 395,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.22.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.22.jpeg",
     "alt": "Низкорамный трал: промежуточный контроль",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6397,11 +7186,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 396,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.48.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.48.jpeg",
     "alt": "Низкорамный трал: готовый результат",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6413,11 +7204,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "готовый результат"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 397,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.50.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.50.jpeg",
     "alt": "Низкорамный трал: состояние до работ",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6429,11 +7222,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "состояние до работ"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 398,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.52.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.52.jpeg",
     "alt": "Низкорамный трал: этап подготовки",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6445,11 +7240,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "этап подготовки"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 399,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.54.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.54.jpeg",
     "alt": "Низкорамный трал: промежуточный контроль",
     "project": "Низкорамный трал",
     "stage": "до/после",
@@ -6461,11 +7258,13 @@ const worksItems = [
       "Низкорамный трал",
       "до/после",
       "промежуточный контроль"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 400,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.55.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.55.jpeg",
     "alt": "Аппарели трала: подготовка под грунт",
     "project": "Аппарели трала",
     "stage": "пескоструй",
@@ -6477,11 +7276,13 @@ const worksItems = [
       "Аппарели трала",
       "пескоструй",
       "подготовка под грунт"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 401,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.56.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.56.jpeg",
     "alt": "Аппарели трала: абразивная очистка",
     "project": "Аппарели трала",
     "stage": "пескоструй",
@@ -6493,11 +7294,13 @@ const worksItems = [
       "Аппарели трала",
       "пескоструй",
       "абразивная очистка"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 402,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 12.59.57.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 12.59.57.jpeg",
     "alt": "Аппарели трала: снятие коррозии",
     "project": "Аппарели трала",
     "stage": "пескоструй",
@@ -6509,11 +7312,13 @@ const worksItems = [
       "Аппарели трала",
       "пескоструй",
       "снятие коррозии"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 403,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 13.00.01.jpeg",
+    "src": "./assets/allimages/traly/WhatsApp Image 2025-11-12 at 13.00.01.jpeg",
     "alt": "Аппарели трала: обработка поверхности",
     "project": "Аппарели трала",
     "stage": "пескоструй",
@@ -6525,11 +7330,13 @@ const worksItems = [
       "Аппарели трала",
       "пескоструй",
       "обработка поверхности"
-    ]
+    ],
+    "category": "traly",
+    "categoryLabel": "Тралы-прицепы"
   },
   {
     "id": 404,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 13.00.02 (1).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-12 at 13.00.02 (1).jpeg",
     "alt": "Спецкузов и фургон: итоговый вид",
     "project": "Спецкузов и фургон",
     "stage": "покраска/пескоструй",
@@ -6541,11 +7348,13 @@ const worksItems = [
       "Спецкузов и фургон",
       "покраска/пескоструй",
       "итоговый вид"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 405,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 13.00.02.jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-12 at 13.00.02.jpeg",
     "alt": "Спецкузов и фургон: очистка поверхности",
     "project": "Спецкузов и фургон",
     "stage": "покраска/пескоструй",
@@ -6557,11 +7366,13 @@ const worksItems = [
       "Спецкузов и фургон",
       "покраска/пескоструй",
       "очистка поверхности"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 406,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 13.00.03 (1).jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-12 at 13.00.03 (1).jpeg",
     "alt": "Спецкузов и фургон: подготовка зоны",
     "project": "Спецкузов и фургон",
     "stage": "покраска/пескоструй",
@@ -6573,11 +7384,13 @@ const worksItems = [
       "Спецкузов и фургон",
       "покраска/пескоструй",
       "подготовка зоны"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 407,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 13.00.03.jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-12 at 13.00.03.jpeg",
     "alt": "Спецкузов и фургон: окраска крупной детали",
     "project": "Спецкузов и фургон",
     "stage": "покраска/пескоструй",
@@ -6589,11 +7402,13 @@ const worksItems = [
       "Спецкузов и фургон",
       "покраска/пескоструй",
       "окраска крупной детали"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 408,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 13.00.04.jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-12 at 13.00.04.jpeg",
     "alt": "Спецкузов и фургон: итоговый вид",
     "project": "Спецкузов и фургон",
     "stage": "покраска/пескоструй",
@@ -6605,11 +7420,13 @@ const worksItems = [
       "Спецкузов и фургон",
       "покраска/пескоструй",
       "итоговый вид"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   },
   {
     "id": 409,
-    "src": "./assets/allimages/WhatsApp Image 2025-11-12 at 13.00.06.jpeg",
+    "src": "./assets/allimages/bortovaya-tehnika/WhatsApp Image 2025-11-12 at 13.00.06.jpeg",
     "alt": "Спецкузов и фургон: очистка поверхности",
     "project": "Спецкузов и фургон",
     "stage": "покраска/пескоструй",
@@ -6621,6 +7438,8 @@ const worksItems = [
       "Спецкузов и фургон",
       "покраска/пескоструй",
       "очистка поверхности"
-    ]
+    ],
+    "category": "bortovaya-tehnika",
+    "categoryLabel": "КМД"
   }
 ];
