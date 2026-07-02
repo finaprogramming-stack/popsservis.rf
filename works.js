@@ -24,14 +24,13 @@ const mobileQuery = window.matchMedia("(max-width: 860px)");
 const categoryOrder = [
   "bitumovoz",
   "vodnaya-tehnika",
-  "drugoe",
   "kmd",
   "krany-kmu",
   "kuzova-ramy",
-  "svar-raboty",
   "traly-pricepy",
   "truby-metallokonstrukcii",
   "fasady",
+  "drugoe",
 ];
 
 const sectionLabels = {
@@ -41,7 +40,6 @@ const sectionLabels = {
   "kmd": "КМД",
   "krany-kmu": "Краны и КМУ",
   "kuzova-ramy": "Кузова и рамы",
-  "svar-raboty": "Свар. работы",
   "traly-pricepy": "Тралы и прицепы",
   "truby-metallokonstrukcii": "Трубы и металлоконструкции",
   "fasady": "Фасады",

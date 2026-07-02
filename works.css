@@ -16,9 +16,12 @@
   gap: 14px;
   padding: 14px;
   border-radius: 28px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.055)),
-    linear-gradient(90deg, rgba(78, 137, 255, 0.08), transparent 46%, rgba(255, 184, 0, 0.09));
+  overflow: hidden;
+  isolation: isolate;
+  background: rgba(24, 38, 57, 0.92);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 18px 42px rgba(0, 0, 0, 0.24);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .works-header-contacts,
@@ -48,47 +51,20 @@
 
 .works-contact {
   position: relative;
-  overflow: hidden;
   padding: 0 16px;
   background: rgba(7, 16, 29, 0.5);
   border: 0.5px solid rgba(255, 255, 255, 0.12);
   color: rgba(244, 248, 255, 0.88);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  transition:
-    transform 0.24s ease,
-    color 0.24s ease,
-    background 0.24s ease,
-    border-color 0.24s ease,
-    box-shadow 0.24s ease;
-}
-
-.works-contact::after {
-  content: "";
-  position: absolute;
-  inset: -40% auto -40% -48%;
-  width: 42%;
-  transform: skewX(-22deg);
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
-  opacity: 0;
-  pointer-events: none;
+  transition: color 0.18s ease, border-color 0.18s ease;
 }
 
 .works-contact:hover {
-  transform: translateY(-3px) scale(1.025);
-  background:
-    radial-gradient(circle at 24% 0%, rgba(255, 216, 92, 0.18), transparent 46%),
-    rgba(7, 16, 29, 0.72);
+  transform: none;
+  background: rgba(7, 16, 29, 0.72);
   border-color: rgba(255, 216, 92, 0.38);
   color: #fff;
-  box-shadow:
-    0 16px 32px rgba(0, 0, 0, 0.22),
-    0 0 0 1px rgba(255, 216, 92, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.16);
-}
-
-.works-contact:hover::after {
-  opacity: 1;
-  animation: worksContactShine 0.78s ease forwards;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
 }
 
 .works-contact-mail {
@@ -106,7 +82,7 @@
   padding: 0 18px;
   border: 0.5px solid rgba(255, 255, 255, 0.15);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.13);
-  transition: transform 0.22s ease, filter 0.22s ease, border-color 0.22s ease;
+  transition: filter 0.18s ease, border-color 0.18s ease;
   gap: 9px;
 }
 
@@ -127,7 +103,7 @@
 
 .works-messenger:hover,
 .works-close-btn:hover {
-  transform: translateY(-2px);
+  transform: none;
 }
 
 .works-messenger-telegram {
@@ -406,12 +382,52 @@
   line-height: 1.65;
 }
 
-.works-gallery-head {
-  align-items: center;
+.section-head.works-gallery-head {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: none;
+  align-items: stretch;
 }
 
 #all-works {
   padding-top: 72px;
+}
+
+.works-gallery-title h2 {
+  margin-bottom: 0;
+}
+
+.works-gallery-title {
+  min-height: 228px;
+  border-radius: 28px;
+  display: grid;
+  align-items: center;
+  padding: 28px 32px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.04)),
+    rgba(21, 34, 52, 0.56);
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  box-shadow: var(--shadow);
+}
+
+.works-gallery-logo {
+  justify-self: stretch;
+  align-self: stretch;
+  min-height: 228px;
+  border-radius: 28px;
+  display: grid;
+  place-items: center;
+  padding: 18px 22px;
+  overflow: hidden;
+}
+
+.works-gallery-logo img {
+  width: min(100%, 560px);
+  height: 100%;
+  max-height: 198px;
+  object-fit: contain;
+  filter: saturate(1.08) contrast(1.06);
 }
 
 .works-page .section {
@@ -445,6 +461,7 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 24px;
   padding: 12px;
   border-radius: 24px;
@@ -453,6 +470,8 @@
 .works-filter {
   border: 0.5px solid rgba(255, 255, 255, 0.12);
   cursor: pointer;
+  justify-content: center;
+  text-align: center;
   transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
@@ -853,16 +872,6 @@
   cursor: pointer;
 }
 
-@keyframes worksContactShine {
-  from {
-    left: -48%;
-  }
-
-  to {
-    left: 118%;
-  }
-}
-
 @media (max-width: 1180px) {
   .works-nav-shell {
     grid-template-columns: 1fr;
@@ -1037,8 +1046,17 @@
     animation: worksBookPrev 0.48s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
-  .works-gallery-head {
+  .section-head.works-gallery-head {
+    grid-template-columns: 1fr;
     align-items: stretch;
+  }
+
+  .works-gallery-title h2 {
+    max-width: none;
+  }
+
+  .works-gallery-logo {
+    min-height: 118px;
   }
 
   .works-section-info {
