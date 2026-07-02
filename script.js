@@ -235,6 +235,13 @@ if (contactForm) {
   statusNode.hidden = true;
   contactForm.appendChild(statusNode);
 
+  const showFormError = (message) => {
+    statusNode.textContent = message;
+    statusNode.hidden = false;
+    statusNode.classList.remove("is-success");
+    statusNode.classList.add("is-error");
+  };
+
   contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -244,10 +251,7 @@ if (contactForm) {
     const phone = String(formData.get("Телефон") || "").trim();
 
     if (!name || !phone) {
-      statusNode.textContent = "Укажите имя и телефон, чтобы мы смогли связаться с вами.";
-      statusNode.hidden = false;
-      statusNode.classList.remove("is-success");
-      statusNode.classList.add("is-error");
+      showFormError("Укажите имя и телефон, чтобы мы смогли связаться с вами.");
       return;
     }
 

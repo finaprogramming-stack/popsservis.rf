@@ -2,13 +2,13 @@ const worksGrid = document.getElementById("works-grid");
 const worksCasesHost = document.getElementById("works-cases");
 const worksCount = document.getElementById("works-count");
 const worksTotal = document.getElementById("works-total");
-const worksSearch = document.getElementById("works-search");
 const worksPageStatus = document.getElementById("works-page-status");
 const worksPagePrev = document.querySelector("[data-page-prev]");
 const worksPageNext = document.querySelector("[data-page-next]");
 const worksCasesPrev = document.querySelector("[data-cases-prev]");
 const worksCasesNext = document.querySelector("[data-cases-next]");
 const filterButtons = document.querySelectorAll("[data-filter]");
+const worksSectionDescription = document.getElementById("works-section-description");
 const worksLightbox = document.getElementById("works-lightbox");
 const worksLightboxImage = document.getElementById("works-lightbox-image");
 const worksLightboxMeta = document.getElementById("works-lightbox-meta");
@@ -16,163 +16,73 @@ const worksLightboxTitle = document.getElementById("works-lightbox-title");
 const worksLightboxDescription = document.getElementById("works-lightbox-description");
 const worksLightboxClose = document.querySelector(".works-lightbox-close");
 const worksLightboxBackdrop = document.querySelector("[data-works-lightbox-close]");
+const worksLightboxCard = document.querySelector(".works-lightbox-card");
 const closeWorksButton = document.querySelector("[data-close-works]");
 
 const mobileQuery = window.matchMedia("(max-width: 860px)");
 
-let activeFilter = "all";
-let activeSearch = "";
+const categoryOrder = [
+  "bitumovoz",
+  "vodnaya-tehnika",
+  "drugoe",
+  "kmd",
+  "krany-kmu",
+  "kuzova-ramy",
+  "svar-raboty",
+  "traly-pricepy",
+  "truby-metallokonstrukcii",
+  "fasady",
+];
+
+const sectionLabels = {
+  "bitumovoz": "Битумовоз",
+  "vodnaya-tehnika": "Водная техника",
+  "drugoe": "Другое",
+  "kmd": "КМД",
+  "krany-kmu": "Краны и КМУ",
+  "kuzova-ramy": "Кузова и рамы",
+  "svar-raboty": "Свар. работы",
+  "traly-pricepy": "Тралы и прицепы",
+  "truby-metallokonstrukcii": "Трубы и металлоконструкции",
+  "fasady": "Фасады",
+};
+
+const byId = new Map(worksItems.map((item) => [item.id, item]));
+const bySectionAndName = new Map(worksItems.map((item) => [`${item.category}:${item.name}`, item]));
+
+let activeFilter = document.querySelector(".works-filter.is-active")?.dataset.filter || categoryOrder[0];
 let activePage = 0;
 let activeCasePage = 0;
 let lastGalleryDirection = "next";
 let lastCasesDirection = "next";
-let galleryOrderMaps = new Map();
 let galleryGroupConfigs = new Map();
-let gallerySectionMap = new Map();
-let showPhotoIds = false;
-
-const byId = new Map(worksItems.map((item) => [item.id, item]));
+let gallerySectionDescriptions = new Map();
+let currentWorkId = null;
+let lightboxTouchStartX = 0;
+let lightboxTouchStartY = 0;
 
 const getPageSize = () => mobileQuery.matches ? 1 : 4;
 const groupPageSize = 4;
 
-const categoryOrder = [
-  "kamazy",
-  "traly",
-  "kater",
-  "bortovaya-tehnika",
-  "krany-manipulyatory",
-  "detali-zapchasti",
-  "truby-profil",
-  "kuzova-ramy",
-  "drugie-raboty",
-  "prom-oborudovanie",
-  "metall-fasad-derevo",
-  "prochee",
-];
-
-const sectionLabels = {
-  "all": "Все",
-  "kamazy": "Битумовозы",
-  "traly": "Тралы-прицепы",
-  "kater": "Катер",
-  "bortovaya-tehnika": "КМД",
-  "krany-manipulyatory": "Краны|манипуляторы",
-  "detali-zapchasti": "Детали и запчасти",
-  "truby-profil": "Трубы и профиль",
-  "kuzova-ramy": "Кузова и рамы",
-  "drugie-raboty": "Другие работы",
-  "svarochnye-raboty": "Сварочные работы",
-  "prom-oborudovanie": "Промышленное оборудование",
-  "metall-fasad-derevo": "Металл, фасады и дерево",
-  "prochee": "Прочее",
+const getEnhancedDescription = (item) => {
+  const meta = getItemMeta(item);
+  return meta.description || "";
 };
 
-const sectionAliases = new Map(Object.entries({
-  "all": "all",
-  "все": "all",
-  "всё": "all",
-  "kamazy": "kamazy",
-  "камазы": "kamazy",
-  "битумовозы": "kamazy",
-  "битумовоз": "kamazy",
-  "traly": "traly",
-  "тралы": "traly",
-  "тралы-прицепы": "traly",
-  "прицепы": "traly",
-  "трал": "traly",
-  "kater": "kater",
-  "катер": "kater",
-  "bortovaya-tehnika": "bortovaya-tehnika",
-  "бортовая техника": "bortovaya-tehnika",
-  "бортовая": "bortovaya-tehnika",
-  "krany-manipulyatory": "krany-manipulyatory",
-  "краны": "krany-manipulyatory",
-  "манипуляторы": "krany-manipulyatory",
-  "краны|манипуляторы": "krany-manipulyatory",
-  "краны и манипуляторы": "krany-manipulyatory",
-  "detali-zapchasti": "detali-zapchasti",
-  "детали": "detali-zapchasti",
-  "запчасти": "detali-zapchasti",
-  "детали и запчасти": "detali-zapchasti",
-  "truby-profil": "truby-profil",
-  "трубы": "truby-profil",
-  "профиль": "truby-profil",
-  "трубы и профиль": "truby-profil",
-  "kuzova-ramy": "kuzova-ramy",
-  "кузова": "kuzova-ramy",
-  "рамы": "kuzova-ramy",
-  "кузова и рамы": "kuzova-ramy",
-  "svarochnye-raboty": "svarochnye-raboty",
-  "сварочные работы": "svarochnye-raboty",
-  "сварочные": "svarochnye-raboty",
-  "сварка": "svarochnye-raboty",
-  "drugie-raboty": "drugie-raboty",
-  "другие работы": "drugie-raboty",
-  "другие": "drugie-raboty",
-  "prom-oborudovanie": "prom-oborudovanie",
-  "промышленное оборудование": "prom-oborudovanie",
-  "пром оборудование": "prom-oborudovanie",
-  "metall-fasad-derevo": "metall-fasad-derevo",
-  "металл фасады дерево": "metall-fasad-derevo",
-  "металл, фасады и дерево": "metall-fasad-derevo",
-  "prochee": "prochee",
-  "прочее": "prochee",
-}));
+const getItemMeta = (item) => {
+  const configs = galleryGroupConfigs.get(item.category) || [];
+  const config = configs.find((row) => String(row.name || "").trim() === item.name) || {};
 
-const getCategoryOrder = (category) => {
-  const index = categoryOrder.indexOf(category);
-  return index === -1 ? categoryOrder.length : index;
+  return {
+    title: String(config.title || ""),
+    description: String(config.description || ""),
+  };
 };
 
-const getManualOrder = (item) => {
-  const scope = activeFilter === "all" ? "all" : activeFilter;
-  const orderMap = galleryOrderMaps.get(scope);
-  return orderMap?.get(item.id) ?? Number.MAX_SAFE_INTEGER;
-};
+const getVisibleItems = () => worksItems
+  .filter((item) => item.category === activeFilter);
 
-const compareWorksItems = (a, b) => {
-  const orderDiff = getManualOrder(a) - getManualOrder(b);
-  if (orderDiff !== 0) {
-    return orderDiff;
-  }
-
-  const categoryDiff = getCategoryOrder(a.category) - getCategoryOrder(b.category);
-  if (categoryDiff !== 0) {
-    return categoryDiff;
-  }
-
-  return a.id - b.id;
-};
-
-const loadGalleryOrderFile = async (scope) => {
-  const response = await fetch(`./gallery-order/${scope}.json?v=${Date.now()}`, {
-    cache: "no-store",
-  });
-
-  if (!response.ok) {
-    throw new Error(`Не загрузился ${scope}.json`);
-  }
-
-  const rows = await response.json();
-  const orderMap = new Map();
-
-  rows.forEach((row) => {
-    const order = Number(row.id);
-    const photoId = Number(row.photoId);
-
-    if (Number.isFinite(order) && Number.isFinite(photoId)) {
-      orderMap.set(photoId, order);
-    }
-  });
-
-  galleryOrderMaps.set(scope, orderMap);
-};
-
-const loadGalleryOrders = async () => {
-  const scopes = ["all", ...categoryOrder];
-  await Promise.all(scopes.map((scope) => loadGalleryOrderFile(scope)));
-};
+const getVisibleCategoryLabel = (item) => sectionLabels[item.category] || item.categoryLabel || item.stage;
 
 const loadGalleryGroupFile = async (scope) => {
   const response = await fetch(`./gallery-groups/${scope}.json?v=${Date.now()}`, {
@@ -189,194 +99,252 @@ const loadGalleryGroupFile = async (scope) => {
 };
 
 const loadGalleryGroups = async () => {
-  const scopes = ["all", ...categoryOrder];
-  await Promise.all(scopes.map((scope) => loadGalleryGroupFile(scope)));
+  await Promise.all(categoryOrder.map((scope) => loadGalleryGroupFile(scope)));
 };
 
-const normalizeSectionName = (value) => {
-  const key = String(value || "").trim().toLowerCase();
-  return sectionAliases.get(key) || "";
-};
-
-const getDefaultSections = (item) => ["all", item.category].filter(Boolean);
-
-const normalizeSections = (sections) => {
-  const rawSections = Array.isArray(sections)
-    ? sections
-    : String(sections || "").split(",").map((section) => section.trim());
-
-  return [...new Set(rawSections
-    .map(normalizeSectionName)
-    .filter(Boolean))];
-};
-
-const loadGallerySections = async () => {
-  gallerySectionMap = new Map();
-
-  const response = await fetch(`./gallery-sections/photos.json?v=${Date.now()}`, {
+const loadGallerySectionDescriptions = async () => {
+  const response = await fetch(`./gallery-sections/descriptions.json?v=${Date.now()}`, {
     cache: "no-store",
   });
 
   if (!response.ok) {
+    gallerySectionDescriptions = new Map();
     return;
   }
 
   const rows = await response.json();
 
-  if (!Array.isArray(rows)) {
-    return;
+  gallerySectionDescriptions = new Map(
+    Array.isArray(rows)
+      ? rows
+        .filter((row) => row && row.slug)
+        .map((row) => [String(row.slug), String(row.description || "").trim()])
+      : []
+  );
+};
+
+const normalizeGroupConfig = (config, entries) => {
+  const count = Math.min(4, Math.max(0, Number(config.count ?? config.merge) || 0));
+  const name = String(config.name || "").trim();
+
+  if (!name || count < 2) {
+    return null;
   }
 
-  rows.forEach((row) => {
-    const photoId = Number(row.photoId ?? row.id);
+  const startIndex = entries.findIndex((entry) => entry.type === "item" && entry.item.name === name);
 
-    if (!Number.isFinite(photoId)) {
+  if (startIndex === -1) {
+    return null;
+  }
+
+  const ids = entries
+    .slice(startIndex, startIndex + count)
+    .filter((entry) => entry.type === "item")
+    .map((entry) => entry.item.id);
+
+  if (ids.length < 2) {
+    return null;
+  }
+
+  const firstPhoto = bySectionAndName.get(`${activeFilter}:${name}`) || byId.get(ids[0]);
+
+  return {
+    startIndex,
+    count: ids.length,
+    ids,
+    title: String(config.title || ""),
+    description: String(config.description || ""),
+  };
+};
+
+const applyGalleryGroup = (entries, config) => {
+  const normalized = normalizeGroupConfig(config, entries);
+
+  if (!normalized) {
+    return entries;
+  }
+
+  const selectedIds = new Set(normalized.ids);
+  const nextEntries = [];
+
+  entries.forEach((entry, index) => {
+    if (index === normalized.startIndex) {
+      nextEntries.push({
+        type: "group",
+        group: {
+          ids: normalized.ids,
+          title: normalized.title,
+          description: normalized.description,
+        },
+      });
+    }
+
+    if (entry.type === "item" && selectedIds.has(entry.item.id)) {
       return;
     }
 
-    gallerySectionMap.set(photoId, normalizeSections(row.sections));
-  });
-};
-
-const loadGallerySettings = async () => {
-  const response = await fetch(`./gallery-settings/show-photo-ids.json?v=${Date.now()}`, {
-    cache: "no-store",
+    nextEntries.push(entry);
   });
 
-  if (!response.ok) {
-    return;
+  return nextEntries;
+};
+
+const getVisibleEntries = () => {
+  const baseEntries = getVisibleItems().map((item) => ({ type: "item", item }));
+  const configs = galleryGroupConfigs.get(activeFilter) || [];
+
+  return configs.reduce((entries, config) => applyGalleryGroup(entries, config), baseEntries);
+};
+
+const getEntrySlotSize = (entry, pageSize) => {
+  if (entry.type !== "group") {
+    return 1;
   }
 
-  const settings = await response.json();
-  showPhotoIds = settings.showPhotoIds === true;
+  return Math.min(pageSize, Math.max(1, entry.group.ids.length));
 };
 
-const phraseBank = [
-  "Работа уже взята в оборот: поверхность читается по кромкам, переходам и следам старого покрытия.",
-  "Здесь результат делают не на глазок: сначала чистая база, потом спокойный переход к финишу.",
-  "Хорошо видна рабочая кухня процесса: металл выводят из уставшего состояния к нормальной основе.",
-  "Дело сдвинулось с мертвой точки: участок уже прошёл важный этап подготовки.",
-  "Тут нельзя рубить с плеча: важны углы, ребра и зоны вокруг крепежа.",
-  "Качество держится на терпении: шаг за шагом убирается лишнее и проявляется ровная основа.",
-  "Техника получает второе дыхание: старые следы уходят, поверхность готовится к защите.",
-  "Всё разложено по полочкам: подготовка, контроль состояния и следующий рабочий шаг.",
-  "Рабочий момент без прикрас: такой участок требует больше внимания, чем кажется с первого взгляда.",
-  "Масштаб виден сразу: металл приводят в порядок не точечно, а по всей ответственной зоне."
-];
+const paginateEntries = (entries, pageSize) => {
+  const pages = [];
+  let currentPage = [];
+  let currentSlots = 0;
 
-const categoryLeads = {
-  "kamazy": [
-    "Кадр по грузовой технике КамАЗ: кабина, кузов или самосвальная часть после подготовки.",
-    "Работа с КамАЗом: виден участок, где важны геометрия кузова, кромки и защита металла.",
-    "Серия по КамАЗу: подготовка и окраска читаются по состоянию кабины, рамы или кузова.",
-  ],
-  "traly": [
-    "Трал или полуприцеп: на фото видна несущая часть, борт, аппарель или зона креплений.",
-    "Работа с прицепной техникой: здесь важны плоскости, ребра жёсткости и состояние металла.",
-    "Кадр по тралу: обработка нужна не только для вида, но и для защиты рабочей поверхности.",
-  ],
-  "kater": [
-    "Корпус катера: видны этапы очистки, грунта или финишного покрытия по борту.",
-    "Серия по катеру: поверхность корпуса готовится к ровному защитному слою.",
-    "Кадр по водной технике: важны чистая база, маскировка и аккуратная линия покрытия.",
-  ],
-  "bortovaya-tehnika": [
-    "КМД или спецкузов: в кадре рабочая платформа, борт либо ёмкость.",
-    "Фото по бортовой машине: проверяется состояние металла на больших открытых плоскостях.",
-    "Кадр по грузовой надстройке: важны борта, стойки, сварные зоны и будущая защита.",
-  ],
-  "krany-manipulyatory": [
-    "Крановая техника или манипулятор: виден элемент стрелы, опоры либо силовой конструкции.",
-    "Работа с крановым узлом: здесь нельзя терять контроль по стыкам и нагруженным местам.",
-    "Кадр по подъёмной технике: подготовка нужна для долговечного покрытия на сложной геометрии.",
-  ],
-  "detali-zapchasti": [
-    "Отдельная деталь или запчасть: крупный план помогает оценить поверхность без лишнего шума.",
-    "Детальный кадр: видно, как обрабатываются диски, плиты, навесные элементы или мелкие узлы.",
-    "Работа с запчастью: на такой площади особенно заметны края, раковины и следы старого слоя.",
-  ],
-  "truby-profil": [
-    "Трубы и профиль: показана наружная или внутренняя очистка протяжённой металлической секции.",
-    "Кадр по трубному металлу: важны равномерность обработки и отсутствие пропущенных зон.",
-    "Работа с профилем: поверхность готовится под дальнейшую защиту по всей длине элемента.",
-  ],
-  "kuzova-ramy": [
-    "Кузов или рама: в кадре несущая часть, где подготовка напрямую влияет на долговечность.",
-    "Работа с рамой/кузовом: видны проблемные зоны старого покрытия и коррозии.",
-    "Кадр по восстановлению основы: металл приводится в состояние под грунт и покраску.",
-  ],
-  "drugie-raboty": [
-    "Рабочий кадр по нестандартной задаче: важны состояние поверхности и аккуратная подготовка.",
-    "Отдельный участок работ: видно, как металл приводится к нормальной базе под следующий этап.",
-    "Кадр из другой категории работ: здесь важны контроль зоны, очистка и защита поверхности.",
-  ],
-  "prom-oborudovanie": [
-    "Промышленный агрегат: видна окраска или подготовка крупного рабочего корпуса.",
-    "Кадр по оборудованию: покрытие должно выдерживать эксплуатацию, а не только выглядеть ровно.",
-    "Работа с промышленной деталью: важны плоскости, углы и аккуратный финиш.",
-  ],
-  "metall-fasad-derevo": [
-    "Объект вне спецтехники: фасад, металл, конструкция или деревянная поверхность.",
-    "Кадр по строительной/декоративной поверхности: задача в аккуратной очистке и защите.",
-    "Работа с нестандартным объектом: важно сохранить геометрию и получить ровную основу.",
-  ],
-  "prochee": [
-    "Сводный кадр из рабочих материалов: видно один из этапов подготовки или результата.",
-    "Фото из общей серии: участок показывает фактуру, состояние поверхности и ход работ.",
-    "Кадр из архива работ: его можно уточнить позже, когда будем удалять лишние фото.",
-  ],
-};
+  entries.forEach((entry) => {
+    const slotSize = getEntrySlotSize(entry, pageSize);
 
-const getEnhancedDescription = (item) => {
-  const leads = categoryLeads[item.category] || categoryLeads.prochee;
-  const lead = leads[item.id % leads.length];
-  const phrase = phraseBank[item.id % phraseBank.length];
-  const step = item.stage ? `Этап: ${item.stage}.` : "";
-  return `${lead} ${step} ${phrase}`.trim();
-};
+    if (currentPage.length && currentSlots + slotSize > pageSize) {
+      pages.push(currentPage);
+      currentPage = [];
+      currentSlots = 0;
+    }
 
-const getSearchText = (item) => [
-  item.title,
-  item.description,
-  getEnhancedDescription(item),
-  item.project,
-  item.categoryLabel,
-  item.category,
-  item.stage,
-  item.step,
-  ...(item.tags || []),
-].join(" ").toLowerCase();
+    currentPage.push(entry);
+    currentSlots += slotSize;
 
-const getItemSections = (item) => {
-  if (!gallerySectionMap.has(item.id)) {
-    return getDefaultSections(item);
+    if (currentSlots >= pageSize) {
+      pages.push(currentPage);
+      currentPage = [];
+      currentSlots = 0;
+    }
+  });
+
+  if (currentPage.length) {
+    pages.push(currentPage);
   }
 
-  return gallerySectionMap.get(item.id);
+  return pages.length ? pages : [[]];
 };
 
-const itemMatchesActiveScope = (item) => {
-  const sections = getItemSections(item);
-  const scope = getActiveScope();
-
-  return sections.includes(scope);
+const getPageSlotCount = (entries, pageSize) => {
+  return entries.reduce((total, entry) => total + getEntrySlotSize(entry, pageSize), 0);
 };
 
-const getVisibleCategoryLabel = (item) => {
-  const scope = getActiveScope();
+const renderWorkCard = (item) => {
+  const meta = getItemMeta(item);
+  const hasText = Boolean(meta.title || meta.description);
 
-  if (scope !== "all" && getItemSections(item).includes(scope)) {
-    return sectionLabels[scope] || item.categoryLabel || item.stage;
+  return `
+    <article class="works-card${hasText ? " works-card-has-body" : ""}" data-work-id="${item.id}" tabindex="0">
+      <img src="${item.src}" alt="${item.alt}" loading="lazy">
+      ${hasText ? `
+        <div class="works-card-body">
+          ${meta.title ? `<h3>${meta.title}</h3>` : ""}
+          ${meta.description ? `<p>${meta.description}</p>` : ""}
+        </div>
+      ` : ""}
+    </article>
+  `;
+};
+
+const renderWorkGroup = (group) => {
+  const photos = group.ids.map((id) => byId.get(id)).filter(Boolean);
+  const firstPhoto = photos[0];
+  const hasText = Boolean(group.title || group.description);
+
+  if (!firstPhoto) {
+    return "";
   }
 
-  return item.categoryLabel || item.stage;
+  return `
+    <article class="works-card works-card-group${hasText ? " works-card-has-body" : ""}" data-work-id="${firstPhoto.id}" data-group-size="${photos.length}" tabindex="0" style="--group-span: ${photos.length};">
+      <div class="works-card-group-media">
+        ${photos.map((photo) => `<img src="${photo.src}" alt="${photo.alt}" loading="lazy" data-work-id="${photo.id}">`).join("")}
+      </div>
+      ${hasText ? `
+        <div class="works-card-body works-card-group-body">
+          ${group.title ? `<h3>${group.title}</h3>` : ""}
+          ${group.description ? `<p>${group.description}</p>` : ""}
+        </div>
+      ` : ""}
+    </article>
+  `;
+};
+
+const renderWorkEntry = (entry) => entry.type === "group"
+  ? renderWorkGroup(entry.group)
+  : renderWorkCard(entry.item);
+
+const renderGrid = () => {
+  const visibleItems = getVisibleItems();
+  const visibleEntries = getVisibleEntries();
+  const pageSize = getPageSize();
+  const pages = paginateEntries(visibleEntries, pageSize);
+  const pageCount = pages.length;
+  activePage = Math.min(activePage, pageCount - 1);
+  const pageEntries = pages[activePage] || [];
+  const pageSlotCount = Math.max(1, Math.min(pageSize, getPageSlotCount(pageEntries, pageSize)));
+  const sectionDescription = gallerySectionDescriptions.get(activeFilter) || "";
+
+  if (worksSectionDescription) {
+    worksSectionDescription.textContent = sectionDescription;
+    worksSectionDescription.hidden = !sectionDescription;
+  }
+
+  if (worksCount) {
+    worksCount.textContent = `${visibleItems.length} фото`;
+  }
+
+  if (worksTotal) {
+    worksTotal.textContent = `${worksItems.length} фото`;
+  }
+
+  worksGrid.classList.remove("is-changing", "turn-next", "turn-prev");
+  worksGrid.dataset.pageSlots = String(pageSlotCount);
+  void worksGrid.offsetWidth;
+  worksGrid.classList.add("is-changing", lastGalleryDirection === "prev" ? "turn-prev" : "turn-next");
+
+  worksGrid.innerHTML = pageEntries.map((entry) => renderWorkEntry(entry)).join("");
+
+  if (!pageEntries.length) {
+    worksGrid.innerHTML = `
+      <div class="works-empty glass">
+        В этот раздел ещё не закинули фото.
+      </div>
+    `;
+  }
+
+  if (worksPageStatus) {
+    worksPageStatus.textContent = `${activePage + 1} / ${pageCount}`;
+  }
+
+  if (worksPagePrev) {
+    worksPagePrev.disabled = pageCount <= 1;
+  }
+
+  if (worksPageNext) {
+    worksPageNext.disabled = pageCount <= 1;
+  }
 };
 
 const renderCases = () => {
-  if (!worksCasesHost) {
+  const section = worksCasesHost?.closest(".works-cases-section");
+
+  if (!worksCasesHost || !worksCases.length) {
+    section?.setAttribute("hidden", "");
     return;
   }
 
+  section?.removeAttribute("hidden");
   worksCasesHost.innerHTML = worksCases.map((item) => {
     const before = item.before.map((id) => byId.get(id)).filter(Boolean);
     const after = item.after.map((id) => byId.get(id)).filter(Boolean);
@@ -400,7 +368,7 @@ const renderCases = () => {
 };
 
 const updateCasesSlider = () => {
-  if (!worksCasesHost) {
+  if (!worksCasesHost || !worksCases.length) {
     return;
   }
 
@@ -431,369 +399,6 @@ const updateCasesSlider = () => {
   });
 };
 
-const getVisibleItems = () => {
-  return worksItems.filter((item) => {
-    const matchesCategory = itemMatchesActiveScope(item);
-    const matchesSearch = !activeSearch || getSearchText(item).includes(activeSearch);
-    return matchesCategory && matchesSearch;
-  }).sort(compareWorksItems);
-};
-
-const getActiveScope = () => activeFilter === "all" ? "all" : activeFilter;
-
-const getEntryItemIdSet = (entries) => new Set(entries
-  .filter((entry) => entry.type === "item")
-  .map((entry) => entry.item.id));
-
-const getPagePhotoIds = (config, entries) => {
-  if (!Array.isArray(config.photoIds)) {
-    return [];
-  }
-
-  const entryItemIds = getEntryItemIdSet(entries);
-  return config.photoIds
-    .map(Number)
-    .filter((id) => Number.isFinite(id) && entryItemIds.has(id));
-};
-
-const applyPagePhotoOrder = (entries, config) => {
-  const page = Math.max(1, Number(config.page) || 1);
-  const startIndex = (page - 1) * groupPageSize;
-
-  if (startIndex >= entries.length) {
-    return entries;
-  }
-
-  const requestedIds = [...new Set(getPagePhotoIds(config, entries))].slice(0, groupPageSize);
-
-  if (!requestedIds.length) {
-    return entries;
-  }
-
-  const currentItems = entries
-    .slice(startIndex, startIndex + requestedIds.length)
-    .filter((entry) => entry.type === "item")
-    .map((entry) => entry.item);
-
-  const changed = requestedIds.some((id, index) => currentItems[index]?.id !== id);
-
-  if (!changed) {
-    return entries;
-  }
-
-  const selectedIds = new Set(requestedIds);
-  const displacedItems = currentItems.filter((item) => !selectedIds.has(item.id));
-  const selectedById = new Map(requestedIds.map((id) => [id, byId.get(id)]).filter(([, item]) => Boolean(item)));
-  const nextEntries = [];
-  let targetIndex = 0;
-  let displacedIndex = 0;
-
-  entries.forEach((entry, index) => {
-    if (index >= startIndex && index < startIndex + requestedIds.length) {
-      const requestedItem = selectedById.get(requestedIds[targetIndex]);
-      targetIndex += 1;
-
-      if (requestedItem) {
-        nextEntries.push({ type: "item", item: requestedItem });
-      }
-
-      return;
-    }
-
-    if (entry.type === "item" && selectedIds.has(entry.item.id)) {
-      const replacement = displacedItems[displacedIndex];
-      displacedIndex += 1;
-
-      if (replacement) {
-        nextEntries.push({ type: "item", item: replacement });
-      }
-
-      return;
-    }
-
-    nextEntries.push(entry);
-  });
-
-  return nextEntries;
-};
-
-const normalizeGroupConfig = (config, entries) => {
-  const page = Math.max(1, Number(config.page) || 1);
-  const merge = Math.min(4, Math.max(0, Number(config.merge) || 0));
-  const startIndex = (page - 1) * groupPageSize;
-
-  if (merge < 2 || startIndex >= entries.length) {
-    return null;
-  }
-
-  const blockItems = entries
-    .slice(startIndex, startIndex + merge)
-    .filter((entry) => entry.type === "item")
-    .map((entry) => entry.item);
-
-  if (!blockItems.length) {
-    return null;
-  }
-
-  const requestedIds = getPagePhotoIds(config, entries);
-
-  const ids = [...new Set(requestedIds)].slice(0, merge);
-
-  blockItems.forEach((item) => {
-    if (ids.length < merge && !ids.includes(item.id)) {
-      ids.push(item.id);
-    }
-  });
-
-  if (ids.length < 2) {
-    return null;
-  }
-
-  return {
-    page,
-    merge: ids.length,
-    startIndex,
-    ids,
-    title: config.title,
-    description: config.description,
-  };
-};
-
-const applyGalleryGroup = (entries, config) => {
-  const normalized = normalizeGroupConfig(config, entries);
-
-  if (!normalized) {
-    return entries;
-  }
-
-  const { startIndex, merge, ids } = normalized;
-  const selectedIds = new Set(ids);
-  const selectedPhotos = ids.map((id) => byId.get(id)).filter(Boolean);
-
-  if (selectedPhotos.length < 2) {
-    return entries;
-  }
-
-  const displacedItems = entries
-    .slice(startIndex, startIndex + merge)
-    .filter((entry) => entry.type === "item" && !selectedIds.has(entry.item.id))
-    .map((entry) => entry.item);
-
-  const nextEntries = [];
-  let displacedIndex = 0;
-
-  entries.forEach((entry, index) => {
-    if (index === startIndex) {
-      nextEntries.push({
-        type: "group",
-        group: {
-          ids,
-          title: normalized.title,
-          description: normalized.description,
-        },
-      });
-    }
-
-    if (index >= startIndex && index < startIndex + merge) {
-      return;
-    }
-
-    if (entry.type === "item" && selectedIds.has(entry.item.id)) {
-      const replacement = displacedItems[displacedIndex];
-      displacedIndex += 1;
-
-      if (replacement) {
-        nextEntries.push({ type: "item", item: replacement });
-      }
-
-      return;
-    }
-
-    nextEntries.push(entry);
-  });
-
-  return nextEntries;
-};
-
-const getVisibleEntries = () => {
-  const scope = getActiveScope();
-  const configs = galleryGroupConfigs.get(scope) || [];
-  const baseEntries = getVisibleItems().map((item) => ({ type: "item", item }));
-  const sortedConfigs = configs.sort((a, b) => (Number(a.page) || 1) - (Number(b.page) || 1));
-  const orderedEntries = sortedConfigs
-    .reduce((entries, config) => applyPagePhotoOrder(entries, config), baseEntries);
-
-  return sortedConfigs
-    .filter((config) => Number(config.merge) >= 2)
-    .reduce((entries, config) => applyGalleryGroup(entries, config), orderedEntries);
-};
-
-const getPageSlotLimit = (pageIndex, pageSize) => {
-  if (pageSize <= 1) {
-    return 1;
-  }
-
-  const scope = getActiveScope();
-  const configs = galleryGroupConfigs.get(scope) || [];
-  const pageConfig = configs.find((config) => Number(config.page) === pageIndex + 1);
-  const cardCount = Number(pageConfig?.cardCount);
-
-  if (!Number.isFinite(cardCount) || cardCount < 1) {
-    return pageSize;
-  }
-
-  return Math.min(pageSize, Math.max(1, Math.floor(cardCount)));
-};
-
-const getEntrySlotSize = (entry, pageSize) => {
-  if (entry.type !== "group") {
-    return 1;
-  }
-
-  return Math.min(pageSize, Math.max(1, entry.group.ids.length));
-};
-
-const paginateEntries = (entries, pageSize) => {
-  const pages = [];
-  let currentPage = [];
-  let currentSlots = 0;
-  let pageIndex = 0;
-
-  entries.forEach((entry) => {
-    const slotSize = getEntrySlotSize(entry, pageSize);
-    let pageLimit = getPageSlotLimit(pageIndex, pageSize);
-
-    if (currentPage.length && currentSlots + slotSize > pageLimit) {
-      pages.push(currentPage);
-      currentPage = [];
-      currentSlots = 0;
-      pageIndex += 1;
-      pageLimit = getPageSlotLimit(pageIndex, pageSize);
-    }
-
-    currentPage.push(entry);
-    currentSlots += slotSize;
-
-    if (currentSlots >= pageLimit) {
-      pages.push(currentPage);
-      currentPage = [];
-      currentSlots = 0;
-      pageIndex += 1;
-    }
-  });
-
-  if (currentPage.length) {
-    pages.push(currentPage);
-  }
-
-  return pages.length ? pages : [[]];
-};
-
-const renderPhotoId = (item) => showPhotoIds
-  ? `<strong class="works-photo-id">ID ${item.id}</strong>`
-  : "";
-
-const renderGroupPhotoIds = (photos) => showPhotoIds
-  ? `<strong class="works-photo-id">ID ${photos.map((photo) => photo.id).join(", ")}</strong>`
-  : "";
-
-const renderWorkCard = (item) => `
-  <article class="works-card" data-work-id="${item.id}" tabindex="0">
-    <img src="${item.src}" alt="${item.alt}" loading="lazy">
-    <div class="works-card-body">
-      <div class="works-card-meta">
-        <span>${getVisibleCategoryLabel(item)}</span>
-      </div>
-      <h3>${item.title}</h3>
-      <p>${getEnhancedDescription(item)}</p>
-      ${renderPhotoId(item)}
-    </div>
-  </article>
-`;
-
-const renderWorkGroup = (group) => {
-  const photos = group.ids.map((id) => byId.get(id)).filter(Boolean);
-  const firstPhoto = photos[0];
-
-  if (!firstPhoto) {
-    return "";
-  }
-
-  return `
-    <article class="works-card works-card-group" data-work-id="${firstPhoto.id}" data-group-size="${photos.length}" tabindex="0" style="--group-span: ${photos.length};">
-      <div class="works-card-group-media">
-        ${photos.map((photo) => `<img src="${photo.src}" alt="${photo.alt}" loading="lazy">`).join("")}
-      </div>
-      <div class="works-card-body works-card-group-body">
-        <div class="works-card-meta">
-          <span>${getVisibleCategoryLabel(firstPhoto)}</span>
-        </div>
-        <h3>${group.title || firstPhoto.title}</h3>
-        <p>${group.description || getEnhancedDescription(firstPhoto)}</p>
-        ${renderGroupPhotoIds(photos)}
-      </div>
-    </article>
-  `;
-};
-
-const renderWorkEntry = (entry) => {
-  if (entry.type === "group") {
-    return renderWorkGroup(entry.group);
-  }
-
-  return renderWorkCard(entry.item);
-};
-
-const getPageSlotCount = (entries, pageSize) => {
-  return entries.reduce((total, entry) => total + getEntrySlotSize(entry, pageSize), 0);
-};
-
-const renderGrid = () => {
-  const visibleItems = getVisibleItems();
-  const visibleEntries = getVisibleEntries();
-  const pageSize = getPageSize();
-  const pages = paginateEntries(visibleEntries, pageSize);
-  const pageCount = pages.length;
-  activePage = Math.min(activePage, pageCount - 1);
-  const pageEntries = pages[activePage] || [];
-  const pageSlotCount = Math.max(1, Math.min(pageSize, getPageSlotCount(pageEntries, pageSize)));
-
-  if (worksCount) {
-    worksCount.textContent = `${visibleItems.length} фото`;
-  }
-
-  if (worksTotal) {
-    worksTotal.textContent = `${worksItems.length} фото`;
-  }
-
-  worksGrid.classList.remove("is-changing", "turn-next", "turn-prev");
-  worksGrid.dataset.pageSlots = String(pageSlotCount);
-  void worksGrid.offsetWidth;
-  worksGrid.classList.add("is-changing", lastGalleryDirection === "prev" ? "turn-prev" : "turn-next");
-
-  worksGrid.innerHTML = pageEntries.map((entry) => renderWorkEntry(entry)).join("");
-
-  if (!pageEntries.length) {
-    worksGrid.innerHTML = `
-      <div class="works-empty glass">
-        Ничего не найдено. Попробуйте другое слово или сбросьте фильтр.
-      </div>
-    `;
-  }
-
-  if (worksPageStatus) {
-    worksPageStatus.textContent = `${activePage + 1} / ${pageCount}`;
-  }
-
-  if (worksPagePrev) {
-    worksPagePrev.disabled = visibleEntries.length <= pageSize;
-  }
-
-  if (worksPageNext) {
-    worksPageNext.disabled = visibleEntries.length <= pageSize;
-  }
-};
-
 const openWork = (id) => {
   const item = byId.get(Number(id));
 
@@ -801,11 +406,16 @@ const openWork = (id) => {
     return;
   }
 
+  currentWorkId = item.id;
+  const meta = getItemMeta(item);
+  const hasMeta = Boolean(meta.title || meta.description);
+
   worksLightboxImage.src = item.src;
   worksLightboxImage.alt = item.alt;
-  worksLightboxMeta.textContent = `${getVisibleCategoryLabel(item) || item.project} · ${item.stage}`;
-  worksLightboxTitle.textContent = item.title;
-  worksLightboxDescription.textContent = getEnhancedDescription(item);
+  worksLightboxMeta.textContent = "";
+  worksLightboxTitle.textContent = meta.title;
+  worksLightboxDescription.textContent = meta.description;
+  worksLightboxCard?.classList.toggle("is-image-only", !hasMeta);
   worksLightbox.hidden = false;
   document.body.style.overflow = "hidden";
 };
@@ -817,12 +427,34 @@ const closeWork = () => {
 
   worksLightbox.hidden = true;
   worksLightboxImage.src = "";
+  worksLightboxCard?.classList.remove("is-image-only");
+  currentWorkId = null;
   document.body.style.overflow = "";
+};
+
+const getLightboxItems = () => getVisibleItems();
+
+const navigateWork = (direction) => {
+  if (!worksLightbox || worksLightbox.hidden || currentWorkId === null) {
+    return;
+  }
+
+  const items = getLightboxItems();
+
+  if (!items.length) {
+    return;
+  }
+
+  const currentIndex = items.findIndex((item) => item.id === currentWorkId);
+  const fallbackIndex = currentIndex === -1 ? 0 : currentIndex;
+  const nextIndex = (fallbackIndex + direction + items.length) % items.length;
+
+  openWork(items[nextIndex].id);
 };
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    activeFilter = button.dataset.filter || "all";
+    activeFilter = button.dataset.filter || categoryOrder[0];
 
     filterButtons.forEach((filterButton) => {
       filterButton.classList.toggle("is-active", filterButton === button);
@@ -834,26 +466,17 @@ filterButtons.forEach((button) => {
   });
 });
 
-worksSearch?.addEventListener("input", () => {
-  activeSearch = worksSearch.value.trim().toLowerCase();
-  activePage = 0;
-  lastGalleryDirection = "next";
-  renderGrid();
-});
-
 worksPagePrev?.addEventListener("click", () => {
-  const visibleItems = getVisibleItems();
   const pageSize = getPageSize();
-  const pageCount = Math.max(1, Math.ceil(visibleItems.length / pageSize));
+  const pageCount = paginateEntries(getVisibleEntries(), pageSize).length;
   activePage = (activePage - 1 + pageCount) % pageCount;
   lastGalleryDirection = "prev";
   renderGrid();
 });
 
 worksPageNext?.addEventListener("click", () => {
-  const visibleItems = getVisibleItems();
   const pageSize = getPageSize();
-  const pageCount = Math.max(1, Math.ceil(visibleItems.length / pageSize));
+  const pageCount = paginateEntries(getVisibleEntries(), pageSize).length;
   activePage = (activePage + 1) % pageCount;
   lastGalleryDirection = "next";
   renderGrid();
@@ -883,9 +506,9 @@ mobileQuery.addEventListener("change", () => {
 });
 
 worksGrid?.addEventListener("click", (event) => {
-  const card = event.target.closest(".works-card");
-  if (card) {
-    openWork(card.dataset.workId);
+  const target = event.target.closest("[data-work-id]");
+  if (target) {
+    openWork(target.dataset.workId);
   }
 });
 
@@ -904,10 +527,53 @@ worksLightboxClose?.addEventListener("click", closeWork);
 worksLightboxBackdrop?.addEventListener("click", closeWork);
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && worksLightbox && !worksLightbox.hidden) {
+  if (!worksLightbox || worksLightbox.hidden) {
+    return;
+  }
+
+  if (event.key === "Escape") {
     closeWork();
+    return;
+  }
+
+  if (event.key === "ArrowLeft") {
+    event.preventDefault();
+    navigateWork(-1);
+  }
+
+  if (event.key === "ArrowRight") {
+    event.preventDefault();
+    navigateWork(1);
   }
 });
+
+worksLightboxCard?.addEventListener("touchstart", (event) => {
+  const touch = event.changedTouches[0];
+
+  if (!touch) {
+    return;
+  }
+
+  lightboxTouchStartX = touch.clientX;
+  lightboxTouchStartY = touch.clientY;
+}, { passive: true });
+
+worksLightboxCard?.addEventListener("touchend", (event) => {
+  const touch = event.changedTouches[0];
+
+  if (!touch) {
+    return;
+  }
+
+  const deltaX = touch.clientX - lightboxTouchStartX;
+  const deltaY = touch.clientY - lightboxTouchStartY;
+
+  if (Math.abs(deltaX) < 55 || Math.abs(deltaX) < Math.abs(deltaY) * 1.25) {
+    return;
+  }
+
+  navigateWork(deltaX < 0 ? 1 : -1);
+}, { passive: true });
 
 closeWorksButton?.addEventListener("click", () => {
   const homeUrl = new URL("./index.html", window.location.href).href;
@@ -923,10 +589,8 @@ closeWorksButton?.addEventListener("click", () => {
 
 renderCases();
 Promise.all([
-  loadGalleryOrders(),
   loadGalleryGroups(),
-  loadGallerySections(),
-  loadGallerySettings(),
+  loadGallerySectionDescriptions(),
 ])
   .catch((error) => {
     console.error("Gallery config failed:", error);

@@ -1,0 +1,52 @@
+[
+  {
+    "section": "Битумовоз",
+    "slug": "bitumovoz",
+    "description": "Тестовое описание"
+  },
+  {
+    "section": "Водная техника",
+    "slug": "vodnaya-tehnika",
+    "description": ""
+  },
+  {
+    "section": "Другое",
+    "slug": "drugoe",
+    "description": ""
+  },
+  {
+    "section": "КМД",
+    "slug": "kmd",
+    "description": ""
+  },
+  {
+    "section": "Краны и КМУ",
+    "slug": "krany-kmu",
+    "description": ""
+  },
+  {
+    "section": "Кузова и рамы",
+    "slug": "kuzova-ramy",
+    "description": ""
+  },
+  {
+    "section": "Свар. работы",
+    "slug": "svar-raboty",
+    "description": ""
+  },
+  {
+    "section": "Тралы и прицепы",
+    "slug": "traly-pricepy",
+    "description": ""
+  },
+  {
+    "section": "Трубы и металлоконструкции",
+    "slug": "truby-metallokonstrukcii",
+    "description": ""
+  },
+  {
+    "section": "Фасады",
+    "slug": "fasady",
+    "description": ""
+  }
+]

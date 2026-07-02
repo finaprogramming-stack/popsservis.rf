@@ -65,7 +65,7 @@
             <img src="./logo.png" alt="">
           </div>
           <div class="works-hero-panel glass">
-            <strong id="works-total">409 фото</strong>
+            <strong id="works-total">0 фото</strong>
             <span>реальные производственные кадры</span>
             <a class="btn btn-primary" href="#all-works">Смотреть галерею</a>
           </div>
@@ -98,29 +98,26 @@
         <div class="section-head split works-gallery-head">
           <div>
             <span class="section-kicker">Все кадры</span>
-            <h2>Полная галерея с индивидуальными описаниями</h2>
-          </div>
-          <div class="works-gallery-tools">
-            <div class="works-count glass" id="works-count"></div>
-            <label class="works-search glass">
-              <span>Поиск</span>
-              <input type="search" id="works-search" placeholder="Ключевое слово">
-            </label>
+            <h2>Галерея по разделам с автоматической выкладкой фото</h2>
           </div>
         </div>
 
         <div class="works-toolbar glass" aria-label="Фильтры галереи">
-          <button class="works-filter is-active" type="button" data-filter="all">Все</button>
+          <button class="works-filter is-active" type="button" data-filter="bitumovoz">Битумовоз</button>
+          <button class="works-filter" type="button" data-filter="vodnaya-tehnika">Водная техника</button>
+          <button class="works-filter" type="button" data-filter="drugoe">Другое</button>
+          <button class="works-filter" type="button" data-filter="kmd">КМД</button>
+          <button class="works-filter" type="button" data-filter="krany-kmu">Краны и КМУ</button>
           <button class="works-filter" type="button" data-filter="kuzova-ramy">Кузова и рамы</button>
-          <button class="works-filter" type="button" data-filter="kamazy">Битумовозы</button>
-          <button class="works-filter" type="button" data-filter="traly">Тралы-прицепы</button>
-          <button class="works-filter" type="button" data-filter="kater">Катер</button>
-          <button class="works-filter" type="button" data-filter="bortovaya-tehnika">КМД</button>
-          <button class="works-filter" type="button" data-filter="krany-manipulyatory">Краны|манипуляторы</button>
-          <button class="works-filter" type="button" data-filter="detali-zapchasti">Детали</button>
-          <button class="works-filter" type="button" data-filter="truby-profil">Трубы</button>
-          <button class="works-filter" type="button" data-filter="drugie-raboty">Другие работы</button>
-          <button class="works-filter" type="button" data-filter="svarochnye-raboty">Сварочные работы</button>
+          <button class="works-filter" type="button" data-filter="svar-raboty">Свар. работы</button>
+          <button class="works-filter" type="button" data-filter="traly-pricepy">Тралы и прицепы</button>
+          <button class="works-filter" type="button" data-filter="truby-metallokonstrukcii">Трубы и металлоконструкции</button>
+          <button class="works-filter" type="button" data-filter="fasady">Фасады</button>
+        </div>
+
+        <div class="works-section-info">
+          <div class="works-section-description glass" id="works-section-description" hidden></div>
+          <div class="works-count glass" id="works-count"></div>
         </div>
 
         <div class="works-gallery-frame">
