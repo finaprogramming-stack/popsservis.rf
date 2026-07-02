@@ -60,6 +60,9 @@ let gallerySectionDescriptions = new Map();
 let currentWorkId = null;
 let lightboxTouchStartX = 0;
 let lightboxTouchStartY = 0;
+let galleryTouchStartX = 0;
+let galleryTouchStartY = 0;
+let lastGalleryWheelAt = 0;
 
 const getPageSize = () => mobileQuery.matches ? 1 : 4;
 const groupPageSize = 4;
@@ -237,6 +240,23 @@ const paginateEntries = (entries, pageSize) => {
 
 const getPageSlotCount = (entries, pageSize) => {
   return entries.reduce((total, entry) => total + getEntrySlotSize(entry, pageSize), 0);
+};
+
+const getGalleryPageCount = () => {
+  const pageSize = getPageSize();
+  return paginateEntries(getVisibleEntries(), pageSize).length;
+};
+
+const navigateGallery = (direction) => {
+  const pageCount = getGalleryPageCount();
+
+  if (pageCount <= 1) {
+    return;
+  }
+
+  activePage = (activePage + direction + pageCount) % pageCount;
+  lastGalleryDirection = direction < 0 ? "prev" : "next";
+  renderGrid();
 };
 
 const renderWorkCard = (item) => {
@@ -467,19 +487,11 @@ filterButtons.forEach((button) => {
 });
 
 worksPagePrev?.addEventListener("click", () => {
-  const pageSize = getPageSize();
-  const pageCount = paginateEntries(getVisibleEntries(), pageSize).length;
-  activePage = (activePage - 1 + pageCount) % pageCount;
-  lastGalleryDirection = "prev";
-  renderGrid();
+  navigateGallery(-1);
 });
 
 worksPageNext?.addEventListener("click", () => {
-  const pageSize = getPageSize();
-  const pageCount = paginateEntries(getVisibleEntries(), pageSize).length;
-  activePage = (activePage + 1) % pageCount;
-  lastGalleryDirection = "next";
-  renderGrid();
+  navigateGallery(1);
 });
 
 worksCasesPrev?.addEventListener("click", () => {
@@ -522,6 +534,53 @@ worksGrid?.addEventListener("keydown", (event) => {
     openWork(card.dataset.workId);
   }
 });
+
+worksGrid?.addEventListener("wheel", (event) => {
+  const primaryDelta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
+
+  if (Math.abs(primaryDelta) < 22 || getGalleryPageCount() <= 1) {
+    return;
+  }
+
+  const now = Date.now();
+
+  if (now - lastGalleryWheelAt < 520) {
+    event.preventDefault();
+    return;
+  }
+
+  event.preventDefault();
+  lastGalleryWheelAt = now;
+  navigateGallery(primaryDelta > 0 ? 1 : -1);
+}, { passive: false });
+
+worksGrid?.addEventListener("touchstart", (event) => {
+  const touch = event.changedTouches[0];
+
+  if (!touch) {
+    return;
+  }
+
+  galleryTouchStartX = touch.clientX;
+  galleryTouchStartY = touch.clientY;
+}, { passive: true });
+
+worksGrid?.addEventListener("touchend", (event) => {
+  const touch = event.changedTouches[0];
+
+  if (!touch || getGalleryPageCount() <= 1) {
+    return;
+  }
+
+  const deltaX = touch.clientX - galleryTouchStartX;
+  const deltaY = touch.clientY - galleryTouchStartY;
+
+  if (Math.abs(deltaX) < 50 || Math.abs(deltaX) < Math.abs(deltaY) * 1.25) {
+    return;
+  }
+
+  navigateGallery(deltaX < 0 ? 1 : -1);
+}, { passive: true });
 
 worksLightboxClose?.addEventListener("click", closeWork);
 worksLightboxBackdrop?.addEventListener("click", closeWork);

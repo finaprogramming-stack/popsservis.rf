@@ -72,11 +72,11 @@
   }
 
   .brand-mark {
-    width: 76px;
-    height: 48px;
+    width: 86px;
+    height: 52px;
     padding: 0;
     border-radius: 16px;
-    flex: 0 0 76px;
+    flex: 0 0 86px;
     transition: transform 0.36s cubic-bezier(0.22, 1, 0.36, 1), border-radius 0.36s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
@@ -471,6 +471,7 @@
     left: 14px;
     right: 14px;
     bottom: 14px;
+    min-height: 132px;
     padding: 16px;
     border-radius: 20px;
     background: linear-gradient(180deg, rgba(12, 22, 38, 0.9), rgba(12, 22, 38, 0.8));
@@ -482,7 +483,7 @@
   }
 
   .service-overlay h3 {
-    margin-bottom: 8px;
+    margin: 0;
     font-size: 1.18rem;
   }
 
@@ -493,6 +494,18 @@
 
   .portfolio-ribbon {
     overflow: visible;
+  }
+
+  .portfolio-more-hero {
+    min-height: 190px;
+    border-radius: 28px;
+    padding: 24px;
+  }
+
+  .btn-gallery-flow {
+    width: min(100%, 280px);
+    min-width: 0;
+    min-height: 64px;
   }
 
   .portfolio-gallery {
