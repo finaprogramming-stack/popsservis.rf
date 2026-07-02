@@ -1,10 +1,9 @@
 const heroImages = [
   "./assets/images/avito-hero-3.jpeg",
-  "./assets/allimages/bitumovoz/4.jpeg",
+  "./assets/images/hero-krany-kmu-11.jpg",
   "./assets/allimages/vodnaya-tehnika/7.jpg",
   "./assets/allimages/krany-kmu/3.jpeg",
   "./assets/allimages/traly-pricepy/12.jpg",
-  "./assets/allimages/truby-metallokonstrukcii/3.jpeg",
 ];
 
 const heroImage = document.getElementById("hero-image");
