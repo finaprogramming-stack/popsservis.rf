@@ -64,6 +64,21 @@ let galleryTouchStartX = 0;
 let galleryTouchStartY = 0;
 let lastGalleryWheelAt = 0;
 
+const getRequestedSection = () => {
+  const params = new URLSearchParams(window.location.search);
+  const requested = params.get("section") || params.get("filter") || window.location.hash.replace(/^#/, "");
+  return categoryOrder.includes(requested) ? requested : "";
+};
+
+const requestedSection = getRequestedSection();
+
+if (requestedSection) {
+  activeFilter = requestedSection;
+  filterButtons.forEach((filterButton) => {
+    filterButton.classList.toggle("is-active", filterButton.dataset.filter === activeFilter);
+  });
+}
+
 const getPageSize = () => mobileQuery.matches ? 1 : 4;
 const groupPageSize = 4;
 

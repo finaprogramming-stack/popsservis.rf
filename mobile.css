@@ -471,7 +471,7 @@
     left: 14px;
     right: 14px;
     bottom: 14px;
-    min-height: 132px;
+    min-height: 76px;
     padding: 16px;
     border-radius: 20px;
     background: linear-gradient(180deg, rgba(12, 22, 38, 0.9), rgba(12, 22, 38, 0.8));
@@ -492,20 +492,18 @@
     line-height: 1.55;
   }
 
+  .service-tile:not(.service-tile-wide) .service-overlay {
+    min-height: 76px;
+    max-height: 76px;
+  }
+
+  .service-tile:not(.service-tile-wide):hover .service-overlay {
+    min-height: 132px;
+    max-height: 310px;
+  }
+
   .portfolio-ribbon {
     overflow: visible;
-  }
-
-  .portfolio-more-hero {
-    min-height: 190px;
-    border-radius: 28px;
-    padding: 24px;
-  }
-
-  .btn-gallery-flow {
-    width: min(100%, 280px);
-    min-width: 0;
-    min-height: 64px;
   }
 
   .portfolio-gallery {

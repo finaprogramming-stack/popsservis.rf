@@ -1,8 +1,10 @@
 const heroImages = [
-  "./assets/images/avito-hero-1.jpeg",
-  "./assets/images/avito-hero-2.jpeg",
   "./assets/images/avito-hero-3.jpeg",
-  "./assets/images/avito-hero-5.jpeg",
+  "./assets/allimages/bitumovoz/4.jpeg",
+  "./assets/allimages/vodnaya-tehnika/7.jpg",
+  "./assets/allimages/krany-kmu/3.jpeg",
+  "./assets/allimages/traly-pricepy/12.jpg",
+  "./assets/allimages/truby-metallokonstrukcii/3.jpeg",
 ];
 
 const heroImage = document.getElementById("hero-image");
@@ -145,7 +147,7 @@ const lightboxClose = lightbox?.querySelector(".lightbox-close");
 const lightboxBackdrop = lightbox?.querySelector("[data-lightbox-close]");
 const lightboxPrev = lightbox?.querySelector(".lightbox-prev");
 const lightboxNext = lightbox?.querySelector(".lightbox-next");
-const galleryImages = Array.from(document.querySelectorAll(".service-tile img, .portfolio-slide img, .portfolio-gallery-card img"));
+const galleryImages = Array.from(document.querySelectorAll(".portfolio-slide img, .portfolio-gallery-card img"));
 let activeGalleryIndex = -1;
 
 const renderLightboxImage = () => {
